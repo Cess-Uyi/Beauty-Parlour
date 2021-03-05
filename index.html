@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Dancing+Script:wght@400;500;600&display=swap"  rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/UI/images/logo.jpg">
+    <link rel="stylesheet" href="UI/css/main.css">
+    <title>Beauty Parlour</title>
+</head>
+
+<body class="container">
+    <header class="main__header">
+        <nav>
+            <ul class="nav">
+                <a href="index.html"><img src="/UI/images/logo.jpg" class="nav__logo" alt="CBP Logo"></a>
+
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Wigs</a></li>
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Weaves</a></li>
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Spa</a></li>
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Nails</a></li>
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Makeup</a></li>
+
+                <div class="dropdown">
+                    <li class="nav__item dropdown__nav__item dropdown__nav__item-main"><a class="nav__link dropdown__main" href="#">Our Services<i class="fas fa-caret-down" style="font-size: 1.8rem; margin-left: .3rem;" ></i></a></li>
+                <div class="dropdown__content">
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Wigs</a></li>
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Weaves</a></li>
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Spa</a></li>
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Nails</a></li>
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Makeup</a></li>
+                </div>
+                </div>
+
+                <li class="nav__item nav__item--right"><a class="nav__link" href="#">Sign Up</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Login</a></li> 
+            </ul>
+        </nav>
+        <div class="name">
+            <h2 class="name__main">Beauty Parlour</h2>
+            <h4 class="name__sub">...your one stop for all your beauty needs</h4>
+        </div>
+        <div class="introtext">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non nemo debitis omnis molestias hic inventore nihil minima eligendi fuga vero, commodi exercitationem voluptatem voluptas soluta iusto velit quam ad aspernatur!</p>
+            <button class="btn btn__introtext">
+                <span class="btn__visible">Book an appointment now</span>
+                <span class="btn__invisible">Home service available</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="bestsellers">
+        <h2 class="bestsellers__header">Bestsellers at BP</h2>
+        <h3 class="weaves__header">Weaves</h3>
+
+        <div class="weaves__product">
+
+            <div class="product">
+                <div class="product__image"><img class="product__image-img" src="UI/images/weave-1.png"></div>
+                <div class="product__name"><a href="#">Weave 1</a></div>
+                <p class="product__price">#50,000</p>
+                <div class="btn addToCartbtn" onclick="addToCart()">Add to Cart</div>
+            </div>
+        
+        <div class="product">
+            <div class="product__image"><img class="product__image-img" src="UI/images/weave-2.png"></div>
+            <div class="product__name"><a href="#">Weave 2</a></div>
+            <p class="product__price">#45,000</p>
+            <div class="btn addtocartbtn" onclick="addToCart()">Add to Cart</div>
+        </div>
+        
+        <div class="product">
+            <div class="product__image"><img class="product__image-img" src="UI/images/weave-4.png"></div>
+            <div class="product__name"><a href="#">Weave 3</a></div>
+            <p class="product__Price">#40,000</p>
+            <div class="btn addtocartbtn" onclick="addToCart()">Add to Cart</div>
+        </div>
+
+        <div class="product">
+            <div class="product__image"><img class="product__image-img" src="UI/images/weave-3.png"></div>
+            <div class="product__name"><a href="#">Weave 4</a></div>
+            <p class="product__Price">#60,000</p>
+            <div class="btn addtocartbtn" onclick="addToCart()">Add to Cart</div>
+        </div>
+    </div>
+
+        <h3 class="wigs__header">Wigs</h3>
+
+        <div class="wigs__product">
+        <div class="product">
+            <div class="product__image"><img class="product__image-img" src="UI/images/wig-1.png"></div>
+            <div class="product__name"><a href="#">Wig 1</a></div>
+            <p class="product__price">#50,000</p>
+            <div class="btn addToCartbtn" onclick="addToCart()">Add to Cart</div>
+        </div>
+        
+        <div class="product">
+            <div class="product__image"><img class="product__image-img" src="UI/images/wig-2.png"></div>
+            <div class="product__name"><a href="#">Wig 2</a></div>
+            <p class="product__price">#70,000</p>
+            <div class="btn addtocartbtn" onclick="addToCart()">Add to Cart</div>
+        </div>
+        
+        <div class="product">
+            <div class="product__image"><img class="product__image-img" src="UI/images/wig-4.png"></div>
+            <div class="product__name"><a href="#">Wig 3</a></div>
+            <p class="product__Price">#45,000</p>
+            <div class="btn addtocartbtn" onclick="addToCart()">Add to Cart</div>
+        </div>
+
+        <div class="product">
+            <div class="product__image"><img class="product__image-img" src="UI/images/wig-3.png"></div>
+            <div class="product__name"><a href="#">Wig 4</a></div>
+            <p class="product__Price">#75,000</p>
+            <div class="btn addtocartbtn" onclick="addToCart()">Add to Cart</div>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="gallery__container">
+        <div class="gallery">
+            <span class="gallery__header">Nail Studio</span>
+            <figure class="gallery__item gallery__item--1"><img src="UI/images/nails-1.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--2"><img src="UI/images/nails-2.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--3"><img src="UI/images/nails-3.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--4"><img src="UI/images/nails-4.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--5"><img src="UI/images/nails-5.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--6"><img src="UI/images/nails-6.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--7"><img src="UI/images/nails-7.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--8"><img src="UI/images/nails-8.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--9"><img src="UI/images/nails-9.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--10"><img src="UI/images/nails-10.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--11"><img src="UI/images/nails-11.png" alt="" class="gallery__img"></figure>
+            <figure class="gallery__item gallery__item--12"><img src="UI/images/nails-12.png" alt="" class="gallery__img"></figure>
+        </div>
+    </section>
+
+    <div class="spa">
+        <div class="spa__text--main">Visit our spa today</div>
+        <div class="spa__text--sub">...and get maximum relaxation</div>
+    </div>
+
+    <div class="makeup__container">
+        <div class="makeup">
+            <div class="makeup__header">Makeup Services</div>
+            <div class="makeup__card">
+                <div class="makeup__card-img"><img src="UI/images/glamMakeup.png"></div>
+                <div class="makeup__card-text">
+                    <div class="makeup__card-text-main">GLAM MAKEUP</div>
+                    <p class="makeup__card-text-sub">Our professional makeup artists will give you that glam look for that event</p>
+                </div>
+            </div>
+
+            <div class="makeup__card">
+                <div class="makeup__card-img"><img src="UI/images/bridalMakeup.png"></div>
+                <div class="makeup__card-text">
+                    <div class="makeup__card-text-main">BRIDAL MAKEUP</div>
+                    <p class="makeup__card-text-sub">We take pride in every bride and ensure they look and feel perfect on their special day</p>
+                </div>
+                </div>
+
+            <div class="makeup__card">
+                <div class="makeup__card-img"><img src="UI/images/owambeMakeup.png"></div>
+                <div class="makeup__card-text">
+                    <div class="makeup__card-text-main">OWAMBE MAKEUP</div>
+                    <p class="makeup__card-text-sub">We ensure you at the spotlight of that owambe you plan to turn up in</p>
+                </div>
+                </div>
+
+            <div class="makeup__card">
+                <div class="makeup__card-img"><img src="UI/images/studioMakeup.png"></div>
+                <div class="makeup__card-text">
+                    <div class="makeup__card-text-main">STUDIO MAKEUP</div>
+                    <p class="makeup__card-text-sub">Book us for your next studio or location shoot</p>
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer__content">
+            <div class="footer__about">
+                <h5>About</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ipsa aliquid sapiente quo sequi illum quas quam facilis cupiditate nesciunt?</p>
+            </div>
+
+            <div class="footer__contact">
+                <h5>Contact us</h5>
+                <ul class="footer__ul">
+                    <li class="footer__item"><a href="#" class="footer__link"><i class="fas fa-map-marker-alt"></i> 3a, Gbenga Ademulegun Lane, Parkview Estate, Ikoyi, Lagos.</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link"><i class="fas fa-phone-alt"></i> 01 251 4157</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link"><i class="fas fa-envelope"></i> support@beautyparlour.co</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__connect">
+                <h5>Connect with us</h5>
+                <ul class="footer__ul">
+                    <li class="footer__item"><a href="#" class="footer__link"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="footer__item"><a href="#" class="footer__link"><i class="fab fa-instagram"></i></a></li>
+                    <li class="footer__item"><a href="#" class="footer__link"><i class="fab fa-twitter"></i></a></li>
+                    <li class="footer__item"><a href="#" class="footer__link"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
+</body>
+</html>

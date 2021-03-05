@@ -35,8 +35,9 @@ HTML, CSS, SCSS
 * None
 
 ###Contributors
-* 
-* 
+* xxxxx
+* xxxxxx
 
 
 ###Date Completed
+xxxxxxxx
