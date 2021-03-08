@@ -58,7 +58,7 @@
         font-size: 1.5rem;
         box-sizing: border-box;
         border: .1rem solid $color-grey-light;
-        border-radius: .3rem;
+        border-radius: .5rem;
 
         &:focus{
             outline: none;
@@ -76,13 +76,14 @@
     grid-row: 3 / 4;
     align-self: end;
     display: grid;
+    margin-top: 1rem;
 
     p{
         font-size: 1.5rem;
         color: $color-grey-dark;
 
         a,
-        a:visited,{
+        a:visited{
             text-decoration: none;
             color: indianred;
         }

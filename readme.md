@@ -7,7 +7,7 @@ There are three different categories of people who use this website;
 
 >Clients/Users
 
-**Super Admin** has access to;
+**Admin** has access to;
 * Manage all shops
 * Activate/deactivate user account
 * View all users

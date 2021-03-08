@@ -486,7 +486,7 @@ nav {
     font-size: 1.5rem;
     box-sizing: border-box;
     border: 0.1rem solid #999;
-    border-radius: .3rem; }
+    border-radius: .5rem; }
     .signup__form div input:focus {
       outline: none;
       border: 0.15rem solid #786fa6; }
@@ -494,7 +494,8 @@ nav {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     align-self: end;
-    display: grid; }
+    display: grid;
+    margin-top: 1rem; }
     .signup__form__end p {
       font-size: 1.5rem;
       color: #303030; }
@@ -509,6 +510,15 @@ nav {
       height: 4rem;
       justify-self: center;
       margin-top: .5rem; }
+
+.signup__form__category__options {
+  display: flex;
+  width: 27rem; }
+  .signup__form__category__options label {
+    color: #303030 !important;
+    margin-top: .5rem; }
+  .signup__form__category__options input:hover {
+    border: none; }
 
 /*
 $font-primary: sans-serif;

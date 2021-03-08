@@ -1,0 +1,22 @@
+.signup__form{
+
+    &__category{
+
+        &__options{
+            display: flex;
+            width: 27rem;
+
+            label{
+                color: $color-grey-dark !important;
+                margin-top: .5rem;
+            }
+
+            input{
+
+                &:hover{
+                    border: none;
+                }
+            }
+        }
+    }
+}
