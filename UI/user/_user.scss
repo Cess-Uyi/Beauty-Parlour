@@ -1,0 +1,102 @@
+.signup__body{
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($color-brown-1, 0.6),
+        rgba($color-brown-2, 0.6)),
+        url(../images/salon-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.user__main{
+    height: 5rem;
+}
+
+.card{
+    // height: 95vh;
+    display: grid;
+    grid-template-columns: 12vw 1fr 12vw;
+    grid-template-rows: 7vw 1fr 7vw;
+
+    &__body{
+        background-color: rgba(#eee, 0.4);
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        @media screen and (max-width:450px){
+            grid-column: 1 / -1;
+        }
+
+        display: grid;
+        grid-template-columns: 10vw 1fr 10vw;
+        grid-template-rows: 5vw max-content 1fr 5vw;
+    }
+}
+
+.signup__form{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: max-content;
+    grid-gap: 2rem;
+    justify-content: center;
+
+ div{
+
+    label{
+        color: rgb(124, 59, 124);
+        font-weight: 500;  
+        font-size: 1.7rem;
+    }
+
+    input{
+        width: 90%;
+        padding: .7rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        box-sizing: border-box;
+        border: .1rem solid $color-grey-light;
+        border-radius: .3rem;
+
+        &:focus{
+            outline: none;
+            border: .15rem solid $color-purple;
+        }
+
+        // &:focus:invalid{
+        //     border-bottom: 2px solid red;
+        // }
+    }
+ }
+
+ &__end{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    align-self: end;
+    display: grid;
+
+    p{
+        font-size: 1.5rem;
+        color: $color-grey-dark;
+
+        a,
+        a:visited,{
+            text-decoration: none;
+            color: indianred;
+        }
+
+        a:hover{
+            color:black;
+    }
+    }
+
+    button{
+        width: 15rem;
+        height: 4rem;
+        justify-self: center;
+        margin-top: .5rem;
+    }
+ }
+}

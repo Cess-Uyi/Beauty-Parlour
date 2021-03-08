@@ -19,12 +19,31 @@ $bp-medium:56.25em; //900px
 $bp-small:37.5em; //600px
 $bp-smallest:25em; //400px
 
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: $font-primary;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
 .container{
     display: grid;
     grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
 }
 
-.main__header{
+.main{
     grid-row: 1 / 2;
     grid-column: 1 / -1;
     height: 90vh;
@@ -52,10 +71,17 @@ nav{
         height: auto;
         margin: 0 1rem;
     }
+    
+    & i{
+        @media screen and (max-width:$bp-smallest){
+            display: none !important;
+        }
+    }
 }
 
 .nav{
-    background-color: $color-black-transparent;
+    // background-color: $color-black-transparent;
+    background-color: $color-grey;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -69,12 +95,20 @@ nav{
         font-size: 1.5rem;
         letter-spacing: .1rem;
     }
+
+    @media screen and (max-width:$bp-smallest){
+        font-size: 1.2rem;
+    }
     
     &__item{
         margin-right: 2rem;
 
         @media screen and (max-width:700px){
             margin-right: 1.5rem;
+        }
+
+        @media screen and (max-width:$bp-smallest){
+            margin-right: .5rem;
         }
 
         &--right{
@@ -86,11 +120,44 @@ nav{
     &__link:visited{
         text-decoration: none;
         text-transform: uppercase;
-        color: $color-grey;
+        color: $color-brown-1;
     }
 
     &__link:hover{
             color: $color-yellow;
+    }
+
+    &__link:focus-visible{
+        outline: none;
+    }
+
+    &__signup{
+        align-self: flex-start;
+        margin-top: 1.25rem;
+        margin-left: auto;
+        z-index: 2;
+
+        @media screen and (max-width:$bp-smallest){
+            margin-top: 1.6rem;
+        }
+
+        &:hover .nav__signup__content{
+            display: block;
+        }
+
+        &__content{
+            background-color: $color-brown-1;
+            margin-top: .9rem;
+            display: none;
+
+            @media screen and (max-width:700px){
+                margin-top: 1rem;
+            }
+
+            @media screen and (max-width:$bp-smallest){
+                margin-top: 1.3rem;
+            }
+        }
     }
 }
 
@@ -110,12 +177,13 @@ nav{
     }
   
     &__content{
-        background-color: rgb(160, 144, 110);
+        background-color: $color-brown-1;
         display: none;
     }
 
     &:hover .dropdown__content{
         display: block;
+        margin-left: -1rem;
     }
 
     &__nav{
@@ -124,10 +192,16 @@ nav{
             margin-bottom: .7rem;
             margin-top: .7rem;
             width: 100%;
+            margin-left: 1rem;
 
             &-main{
-            margin-top: .4rem;
+            margin-top: .3rem;
             margin-bottom: .85rem;
+            margin-left: 0;
+
+                @media screen and (max-width:$bp-smallest){
+                    margin-top: .6rem;
+                }
             }
         }
         

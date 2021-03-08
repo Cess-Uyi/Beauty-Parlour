@@ -11,7 +11,7 @@
 </head>
 
 <body class="container">
-    <header class="main__header">
+    <div class="main">
         <nav>
             <ul class="nav">
                 <a href="index.html"><img src="/UI/images/logo.jpg" class="nav__logo" alt="CBP Logo"></a>
@@ -23,7 +23,7 @@
                 <li class="nav__item big-screen"><a class="nav__link" href="#">Makeup</a></li>
 
                 <div class="dropdown">
-                    <li class="nav__item dropdown__nav__item dropdown__nav__item-main"><a class="nav__link dropdown__main" href="#">Our Services<i class="fas fa-caret-down" style="font-size: 1.8rem; margin-left: .3rem;" ></i></a></li>
+                    <li class="nav__item dropdown__nav__item dropdown__nav__item-main"><a class="nav__link dropdown__main" href="#">Our Services<i class="fas fa-caret-down nav__icon" style="font-size: 1.8rem; margin-left: .3rem; margin-top: .4rem;" ></i></a></li>
                 <div class="dropdown__content">
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Wigs</a></li>
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Weaves</a></li>
@@ -33,7 +33,14 @@
                 </div>
                 </div>
 
-                <li class="nav__item nav__item--right"><a class="nav__link" href="#">Sign Up</a></li>
+                <div class="nav__signup ">
+                     <li class="nav__item nav__item--right"><a class="nav__link" href="#">Sign Up<i class="fas fa-caret-down nav__icon" style="font-size: 1.8rem; margin-left: .3rem; margin-top: .4rem;" ></i></a></li>
+                    <div class="nav__signup__content">
+                        <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="UI/user/us_index.html">Client</a></li>
+                        <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="UI/vendor/vd_index.html">Vendor</a></li>
+                    </div>
+                </div>
+
                 <li class="nav__item"><a class="nav__link" href="#">Login</a></li> 
             </ul>
         </nav>
@@ -48,7 +55,7 @@
                 <span class="btn__invisible">Home service available</span>
             </button>
         </div>
-    </header>
+    </div>
 
     <section class="bestsellers">
         <h2 class="bestsellers__header">Bestsellers at BP</h2>
