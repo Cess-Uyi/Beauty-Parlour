@@ -668,3 +668,93 @@ nav{
         }
     }
 }
+
+
+
+
+
+// LOGIN PAGE
+.login{
+    &__card{
+
+        &__body{
+            background-color: $color-grey !important;
+            border: .5rem solid $color-purple;
+            border-radius: 1rem;
+            margin: 0 10vw;
+
+            display: grid;
+            grid-template-columns: 10vw 1fr 10vw;
+            grid-template-rows: 5vw 12rem max-content 1fr 5vw !important;
+
+            @media screen and (max-width:$bp-small){
+                margin: 0 2vw;
+            }
+        }
+    }
+
+    &__img{
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        justify-self: center;
+        height: 12rem;
+        width: auto;
+        border: .5vw solid $color-purple;
+    }
+
+    &__form{
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        justify-self: center;
+        width: 90%;
+        margin: 2rem 0;
+
+        div{
+
+            label{
+                color: rgb(124, 59, 124);
+                font-weight: 500;  
+                font-size: 1.7rem;
+            }
+        
+            input{
+                width: 90%;
+                padding: .7rem;
+                height: 4rem;
+                font-size: 1.5rem;
+                box-sizing: border-box;
+                border: .1rem solid $color-grey-light;
+                border-radius: .5rem;
+        
+                &:focus{
+                    outline: none;
+                    border: .15rem solid $color-purple;
+                }
+            }
+         }
+
+        &__end{
+            grid-row: 4 / 5;
+            grid-column: 2 / 3;
+            justify-self: center;
+
+            a,
+            a:visited{
+                font-size: 1.4rem;
+                color: cornflowerblue;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            button{
+                margin: auto;
+                margin-top: 1rem;
+                width: 15rem;
+                height: 4rem;
+            }
+        }
+    }
+}

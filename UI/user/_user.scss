@@ -86,11 +86,11 @@
         a:visited{
             text-decoration: none;
             color: indianred;
-        }
 
-        a:hover{
-            color:black;
-    }
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 
     button{

@@ -443,6 +443,65 @@ nav {
       .footer__connect {
         text-align: start; } }
 
+.login__card__body {
+  background-color: #eee !important;
+  border: 0.5rem solid #786fa6;
+  border-radius: 1rem;
+  margin: 0 10vw;
+  display: grid;
+  grid-template-columns: 10vw 1fr 10vw;
+  grid-template-rows: 5vw 12rem max-content 1fr 5vw !important; }
+  @media screen and (max-width: 37.5em) {
+    .login__card__body {
+      margin: 0 2vw; } }
+
+.login__img {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  justify-self: center;
+  height: 12rem;
+  width: auto;
+  border: 0.5vw solid #786fa6; }
+
+.login__form {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  justify-self: center;
+  width: 90%;
+  margin: 2rem 0; }
+  .login__form div label {
+    color: #7c3b7c;
+    font-weight: 500;
+    font-size: 1.7rem; }
+  .login__form div input {
+    width: 90%;
+    padding: .7rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    border: 0.1rem solid #999;
+    border-radius: .5rem; }
+    .login__form div input:focus {
+      outline: none;
+      border: 0.15rem solid #786fa6; }
+  .login__form__end {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    justify-self: center; }
+    .login__form__end a,
+    .login__form__end a:visited {
+      font-size: 1.4rem;
+      color: cornflowerblue;
+      text-decoration: none; }
+      .login__form__end a:hover,
+      .login__form__end a:visited:hover {
+        text-decoration: underline; }
+    .login__form__end button {
+      margin: auto;
+      margin-top: 1rem;
+      width: 15rem;
+      height: 4rem; }
+
 .signup__body {
   background-image: linear-gradient(to bottom right, rgba(109, 93, 75, 0.6), rgba(84, 72, 58, 0.6)), url(../images/salon-img.jpg);
   background-size: cover;
@@ -503,8 +562,9 @@ nav {
       .signup__form__end p a:visited {
         text-decoration: none;
         color: indianred; }
-      .signup__form__end p a:hover {
-        color: black; }
+        .signup__form__end p a:hover,
+        .signup__form__end p a:visited:hover {
+          text-decoration: underline; }
     .signup__form__end button {
       width: 15rem;
       height: 4rem;

@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Dancing+Script:wght@400;500;600&display=swap"  rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/UI/images/logo.jpg">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Vendor Sign up</title>
+    <title>Login</title>
 </head>
 
 <body class="signup__body">
@@ -34,72 +34,44 @@
                 </div>
 
                 <div class="nav__signup ">
-                    <li class="nav__item nav__item--right"><a class="nav__link" href="#" style="display: none;">Sign Up<i class="fas fa-caret-down nav__icon" style="font-size: 1.8rem; margin-left: .3rem; margin-top: .4rem;" ></i></a></li>
+                    <li class="nav__item nav__item--right"><a class="nav__link" href="#">Sign Up<i class="fas fa-caret-down nav__icon" style="font-size: 1.8rem; margin-left: .3rem; margin-top: .4rem;" ></i></a></li>
                    <div class="nav__signup__content">
                        <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="UI/user/us_index.html">Client</a></li>
                        <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="UI/vendor/vd_index.html">Vendor</a></li>
                    </div>
                </div>
 
-               <li class="nav__item"><a class="nav__link" href="#" style="margin-left: auto;">Login</a></li> 
+               <li class="nav__item"><a class="nav__link" href="#" style="display: none;">Login</a></li> 
             </ul>
         </nav>
     </div>
 
     <div class="card">
-        <div class="card__body">
-            <form action="" class="signup__form">
-                <div class="signup__form__name">
-                <label for="name">Business Name</label> <br>
-                <input type="text" id="name" name="name" placeholder="business name" required="required">
-                </div>
+        <div class="card__body login__card__body">
+            <div class="login__img">
+                <img src="../images/logo.jpg" alt="beauty Parlour Logo">
+            </div>
 
-                <div class="signup__form__category">
-                    <label for="address">Business Category</label> <br>
-                    <div class="signup__form__category__options">
-                        <input type="checkbox" name="category">
-                        <label for="hair">Hair</label>
-
-                        <input type="checkbox" name="category">
-                        <label for="spa">Spa</label>
-
-                        <input type="checkbox" name="category">
-                        <label for="nails">Nails</label>
-
-                        <input type="checkbox" name="category">
-                        <label for="makeup">Makeup</label>
+            <form action="" class="login__form">
+                <div class="login__form__email">
+                    <label for="email">Email</label> <br>
+                    <input type="email" id="email" name="email" placeholder="email" required="required">
                     </div>
-                </div>
-                
-                <div class="signup__form__address">
-                    <label for="address">Store Address</label> <br>
-                    <input type="text" id="address" name="address" placeholder="address" required="required">
-                </div>
-
-                <div class="signup__form__phone">
-                <label for="phone">Phone</label> <br>
-                <input type="number" id="phone" name="phone" placeholder="phone number" required="required">
-                </div>
-
-                <div class="signup__form__email">
-                <label for="email">Email</label> <br>
-                <input type="email" id="email" name="email" placeholder="email" required="required">
-                </div>
-
-                <div class="signup__form__password">
-                <label for="password">Password</label> <br>
-                <input type="password" id="password" name="password" placeholder="password" required="required">
-                </div>
+    
+                    <div class="login__form__password">
+                    <label for="password">Password</label> <br>
+                    <input type="password" id="password" name="password" placeholder="password" required="required">
+                    </div>
             </form>
 
-            <div class="signup__form__end">
-                <p><input type="checkbox"  required="required"> I agree with the storage and handling of my data by the website privacy policy. <a href="#">Privacy Policy</a></p>
-                <button class="btn">SIGN UP</button>
-                </div>
+            <div class="login__form__end">
+                <a href="#">Forgot your password?</a><br>
+                <button class="btn login__form__end__btn">Log in</button>
+            </div>
+        
         </div>
     </div>
     
-
     <div class="footer signup__footer">
         <div class="footer__content">
             <div class="footer__about">
