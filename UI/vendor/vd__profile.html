@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Dancing+Script:wght@400;500;600&display=swap"  rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/UI/images/logo.jpg">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Client Sign up</title>
+    <title>Vendor Profile</title>
 </head>
 
-<body class="signup__body">
+<body class="vd__profile">
     <div class="main user__main">
         <nav>
             <ul class="nav">
@@ -32,7 +32,7 @@
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Makeup</a></li>
                 </div>
                 </div>
-
+<!-- 
                 <div class="nav__signup ">
                     <li class="nav__item nav__item--right"><a class="nav__link" href="#" style="display: none;">Sign Up<i class="fas fa-caret-down nav__icon" style="font-size: 1.8rem; margin-left: .3rem; margin-top: .4rem;" ></i></a></li>
                    <div class="nav__signup__content">
@@ -41,48 +41,104 @@
                    </div>
                </div>
 
-               <li class="nav__item"><a class="nav__link" href="#" style="margin-left: auto;">Login</a></li> 
+               <li class="nav__item"><a class="nav__link" href="#" style="margin-left: auto;">Login</a></li>  -->
             </ul>
         </nav>
     </div>
 
-    <div class="card">
-        <div class="card__body">
-            <form action="" class="signup__form">
-                <div class="signup__form__name">
-                <label for="name">Name</label> <br>
-                <input type="text" id="name" name="name" placeholder="full name" required="required">
+        <input type="text" placeholder="Search for client, vendor or service" class="searchbar vendor__searchbar">
+        
+        <div class="vd__header">
+            <div class="user__profile vendor__profile">
+                <div class="user__profile__pic vendor__profile__pic" style="align-self: center;">
+                    <img src="../images/spazone_logo.png" style="object-fit: fill;" alt="dp">
                 </div>
-
-                <div class="signup__form__username">
-                <label for="username">Username</label> <br>
-                <input type="text" id="username" name="username" placeholder="username" required="required">
+                
+                <div class="vendor__profile__right">
+                    <div class="user__profile__name">
+                        <p>Spa Zone</p>
+                    </div>
+                    <p style="color: #eee; font-size: 1.5rem;">Skincare and Traditional Spa</p>
+                    <div class="star-icon" style="color: #eee;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p><a href="#" style="color: #eee; font-size: 1.5rem;">278 reviews</a></p>
+                    <a href="#">Edit Profile <i class="fas fa-pen"></i></a>
                 </div>
-
-                <div class="signup__form__email">
-                <label for="email">Email</label> <br>
-                <input type="email" id="email" name="email" placeholder="email" required="required">
-                </div>
-
-                <div class="signup__form__phone">
-                <label for="phone">Phone</label> <br>
-                <input type="number" id="phone" name="phone" placeholder="phone number" required="required">
-                </div>
-
-                <div class="signup__form__password">
-                <label for="password">Password</label> <br>
-                <input type="password" id="password" name="password" placeholder="password" required="required">
-                </div>
-            </form>
-
-            <div class="signup__form__end">
-                <p><input type="checkbox"  required="required"> I agree with the storage and handling of my data by the website privacy policy. <a href="#">Privacy Policy</a></p>
-                <button class="btn">SIGN UP</button>
-                </div>
+            </div>
+            
         </div>
-    </div>
+
+        <div class="vd__carousel">
+            <img src="../images/carousel__spa.jpg" alt="Carousel Pictures">
+        </div>
+        
+        <form class="vd__upload">
+            <label for="uploadfile">Upload photos</label><br>
+            <input type="file" name="myfile">
+        </form>
+
+        <div class="vendor__dashboard">
+            <div class="vendor__card">
+                <h3>Pending Appointments(13)</h3>
+                <ul>
+                    <div class="list">
+                        <li><a href="#">Dolapo</a></li>
+                        <div class="button">
+                            <button class="accept">Accept</button>
+                            <button class="decline">Decline</button>
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <li><a href="#">Kemi</a></li>
+                        <div class="button">
+                            <button class="accept">Accept</button>
+                            <button class="decline">Decline</button>
+                        </div>
+                   </div>
+
+                    <div class="list">
+                        <li><a href="#">Shola</a></li>
+                        <div class="button">
+                            <button class="accept">Accept</button>
+                            <button class="decline">Decline</button>
+                        </div>                    
+                    </div>
+
+                    <div class="list">
+                        <li><a href="#">Gbenga</a></li>
+                        <div class="button">
+                            <button class="accept">Accept</button>
+                            <button class="decline">Decline</button>
+                        </div>
+                    </div>
+
+                    <div class="list">
+                        <li><a href="#">Fuzitsai</a></li>
+                        <div class="button">
+                            <button class="accept">Accept</button>
+                            <button class="decline">Decline</button>
+                        </div>                   
+                    </div>
+
+                    <div class="all">
+                        <a href="#">See all...</a>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="vendor__button">
+                <button>View All Appointment History</button>
+            </div>
+        </div>
+
     
-    <div class="footer signup__footer">
+    <div class="footer us__profile__footer">
         <div class="footer__content">
             <div class="footer__about">
                 <h5>About</h5>
@@ -109,6 +165,7 @@
             </div>
         </div>
     </div>
+    
+    <script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
 </body>
-<script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
 </html>

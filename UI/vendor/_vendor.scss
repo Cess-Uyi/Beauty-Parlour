@@ -20,3 +20,213 @@
         }
     }
 }
+
+
+
+
+
+// VENDOR PROFILE
+.vendor{
+
+    &__searchbar{
+        width: 27rem;
+        text-align: center;
+    }
+
+    &__profile{
+        
+        @media screen and (max-width:450px){
+            grid-column: 1 / -1;
+            margin-left: 1rem;
+        }
+    }
+}
+
+.vendor__profile{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+    &__right{
+        margin-left: 1rem;
+    }
+}
+
+.vd{
+
+    &__profile{
+        background-color: $color-pink-light;
+        display: grid;
+        grid-template-columns: 10vw max-content 1fr 10vw;
+    }
+
+    &__carousel{
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        height: 40rem;
+        border-bottom: .7rem solid $color-purple;
+    }
+
+    &__header{
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        // background-color: $color-brown-1;
+        background-color: $color-purple;
+        display: grid;
+        grid-template-columns: 10vw 1fr 10vw;
+        grid-gap: 2rem;
+        // margin-bottom: 3rem;
+    }
+
+    &__upload{
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        justify-self: end;
+        align-self: end;
+
+        label{
+            color: $color-purple;
+        }
+
+        input{
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.vendor__dashboard{
+    grid-row: 4 / 5;
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 3vw;
+    margin: 5rem 0;
+
+    @media screen and (max-width:$bp-smallest){
+        grid-column: 1 / -1;
+        margin: 5rem 5vw;
+    }
+}
+
+.vendor__card{
+    grid-column: 1 / 2;
+    background-color: #fff;
+    padding: 2rem 4rem;
+    border: 2px solid $color-brown-1;
+    border-radius: 1.5rem;
+
+    @media screen and (max-width:$bp-medium){
+        grid-column: 1 / 3;
+    }
+
+    @media screen and (max-width:$bp-smallest){
+        padding: 2rem 2rem;
+    }
+
+    h3{
+        color: $color-brown-1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    ul{
+        list-style: none;
+
+        .list{
+            display: flex;
+        }
+
+        li{
+            display: inline-block;
+            margin-bottom: .5rem;
+    
+            @media screen and (max-width:$bp-smallest){
+                font-size: 1.4rem;
+            }
+        }
+    
+        a{
+            text-decoration: none;
+            color: $color-purple;
+    
+            &:hover{
+                color: $color-grey-dark;
+            }
+        }
+        
+        .button{
+            margin: auto 0 auto auto;
+        }
+        button{
+            min-width: 8rem;
+            height: 3rem;
+            padding: .3rem .6rem;
+            background-color: $color-pink-light;
+            color: $color-grey;
+            border: none;
+            box-shadow: .1rem .2rem .5rem $color-brown-1;
+            cursor: pointer;
+
+            @media screen and (max-width:$bp-smallest){
+                min-width: 5rem;
+            }
+
+            &:hover{
+                background-color: coral !important;
+            }
+        }
+
+        .all{
+            font-size: 1.4rem;
+            margin-top: 1rem;
+
+            a{
+                color: coral;
+                float: right;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.accept{
+    background-color: green !important;
+}
+
+.decline{
+    background-color: red !important;
+}
+
+.vendor__button{
+    grid-template-columns: 2 / 3;
+    justify-self: center;
+    align-self: center;
+
+    @media screen and (max-width:$bp-medium){
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+    }
+
+    button{
+        min-width: 20rem;
+        height: 6rem;
+        padding: .3rem .6rem;
+        background-color: #eee;
+        color: $color-brown-1;
+        border: none;
+        box-shadow: .1rem .2rem .5rem $color-brown-1;
+        cursor: pointer;
+
+        @media screen and (max-width:$bp-smallest){
+            min-width: 5rem;
+        }
+
+        &:hover{
+            color: $color-grey !important;
+            background-color: $color-brown-1;
+        }
+    }
+}

@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Dancing+Script:wght@400;500;600&display=swap"  rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/UI/images/logo.jpg">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Client Sign up</title>
+    <title>Admin Profile</title>
 </head>
 
-<body class="signup__body">
+<body class="admin__profile">
     <div class="main user__main">
         <nav>
             <ul class="nav">
@@ -32,7 +32,7 @@
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Makeup</a></li>
                 </div>
                 </div>
-
+<!-- 
                 <div class="nav__signup ">
                     <li class="nav__item nav__item--right"><a class="nav__link" href="#" style="display: none;">Sign Up<i class="fas fa-caret-down nav__icon" style="font-size: 1.8rem; margin-left: .3rem; margin-top: .4rem;" ></i></a></li>
                    <div class="nav__signup__content">
@@ -41,48 +41,60 @@
                    </div>
                </div>
 
-               <li class="nav__item"><a class="nav__link" href="#" style="margin-left: auto;">Login</a></li> 
+               <li class="nav__item"><a class="nav__link" href="#" style="margin-left: auto;">Login</a></li>  -->
             </ul>
         </nav>
     </div>
 
-    <div class="card">
-        <div class="card__body">
-            <form action="" class="signup__form">
-                <div class="signup__form__name">
-                <label for="name">Name</label> <br>
-                <input type="text" id="name" name="name" placeholder="full name" required="required">
-                </div>
-
-                <div class="signup__form__username">
-                <label for="username">Username</label> <br>
-                <input type="text" id="username" name="username" placeholder="username" required="required">
-                </div>
-
-                <div class="signup__form__email">
-                <label for="email">Email</label> <br>
-                <input type="email" id="email" name="email" placeholder="email" required="required">
-                </div>
-
-                <div class="signup__form__phone">
-                <label for="phone">Phone</label> <br>
-                <input type="number" id="phone" name="phone" placeholder="phone number" required="required">
-                </div>
-
-                <div class="signup__form__password">
-                <label for="password">Password</label> <br>
-                <input type="password" id="password" name="password" placeholder="password" required="required">
-                </div>
-            </form>
-
-            <div class="signup__form__end">
-                <p><input type="checkbox"  required="required"> I agree with the storage and handling of my data by the website privacy policy. <a href="#">Privacy Policy</a></p>
-                <button class="btn">SIGN UP</button>
-                </div>
+        <input type="text" placeholder="Search..." class="searchbar">
+        
+        <div class="admin__header">            
+            <p class="admin__header__text">Beauty Parlour</p>
         </div>
-    </div>
+
+        
+        <div class="admin__dashboard">
+            <div class="admin__card">
+                <h3>View All Stores(35)</h3>
+                <ul>
+                    <div class="list">
+                        <li><a href="#">Hair by Gerald</a></li>
+                        <button>Manage</button>
+                    </div>
+
+                    <div class="list">
+                        <li><a href="#">Spa Zone</a></li>
+                        <button>Manage</button>
+                    </div>
+
+                    <div class="list">
+                        <li><a href="#">Diana Signature Makeover</a></li>
+                        <button>Manage</button>
+                    </div>
+
+                    <div class="list">
+                        <li><a href="#">Nailed It!</a></li>
+                        <button>Manage</button>
+                    </div>
+
+                    <div class="list">
+                        <li><a href="#">Bibyonce</a></li>
+                        <button>Manage</button>
+                    </div>
+
+                    <div class="all">
+                        <a href="#">See all...</a>
+                    </div>
+                </ul>
+            </div>
+            
+            <div class="admin__button">
+                <button>View All Users</button>
+            </div>
+        </div>
+
     
-    <div class="footer signup__footer">
+    <div class="footer us__profile__footer">
         <div class="footer__content">
             <div class="footer__about">
                 <h5>About</h5>
@@ -109,6 +121,7 @@
             </div>
         </div>
     </div>
+    
+    <script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
 </body>
-<script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
 </html>
