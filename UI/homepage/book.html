@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Dancing+Script:wght@400;500;600&display=swap"  rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/UI/images/logo.jpg">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Client Profile</title>
+    <title>Book Appointment</title>
 </head>
 
 <body class="profile">
@@ -16,7 +16,8 @@
             <ul class="nav">
                 <a href="../../index.html"><img src="/UI/images/logo.jpg" class="nav__logo" alt="CBP Logo"></a>
 
-                <li class="nav__item big-screen"><a class="nav__link" href="#">Salon</a></li>
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Wigs</a></li>
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Weaves</a></li>
                 <li class="nav__item big-screen"><a class="nav__link" href="#">Spa</a></li>
                 <li class="nav__item big-screen"><a class="nav__link" href="#">Nails</a></li>
                 <li class="nav__item big-screen"><a class="nav__link" href="#">Makeup</a></li>
@@ -24,18 +25,32 @@
                 <div class="dropdown">
                     <li class="nav__item dropdown__nav__item dropdown__nav__item-main"><a class="nav__link dropdown__main" href="#">Our Services<i class="fas fa-caret-down" style="font-size: 1.8rem; margin-left: .3rem;" ></i></a></li>
                 <div class="dropdown__content">
-                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Salon</a></li>
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Wigs</a></li>
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Weaves</a></li>
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Spa</a></li>
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Nails</a></li>
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Makeup</a></li>
                 </div>
                 </div>
+
+                <div class="nav__signup ">
+                    <li class="nav__item nav__item--right"><a class="nav__link" href="#" style="display: none;">Sign Up<i class="fas fa-caret-down nav__icon" style="font-size: 1.8rem; margin-left: .3rem; margin-top: .4rem;" ></i></a></li>
+                   <div class="nav__signup__content">
+                       <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="UI/user/us_index.html">Client</a></li>
+                       <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="UI/vendor/vd_index.html">Vendor</a></li>
+                   </div>
+               </div>
+
+               <li class="nav__item"><a class="nav__link" href="#" style="display: none; margin-left: auto;">Login</a></li> 
             </ul>
         </nav>
     </div>
 
-    <div class="side-nav" id="side-nav">
-        <i class="fas fa-times exit-side-nav" id="close-btn" onclick="closeNav()"></i>
+
+
+    <div class="side-nav" id="sidenav">
+
+        <i class="fas fa-times exit-side-nav"></i>
         <input type="text" placeholder="Search..." class="searchbar">
 
         <div class="profile">
@@ -60,76 +75,56 @@
         </div>
     </div>
 
-    
+
+    <div class="signup__body">
         
-
-    <div class="dashboard" id="dashboard">
-        <i id="open-btn" class="fas fa-bars open-side-nav toggle-btn" onclick="openNav()"></i>
-
-        <div class="header">            
-            <p class="welcome__text">Welcome Back Jane!</p>
-        </div>
-
-        <div class="profile__card">
-            <h3>Recent History</h3>
-            <ul>
-                <div class="list">
-                    <li><a href="#">Hair by Gerald</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
+    <div class="inner-profile">
+        <div class="inner-profile__body">
+            <form action="">
+                <div>
+                <label for="name">Name</label> <br>
+                <input type="text" id="name" name="name" placeholder="full name" required="required">
                 </div>
 
-                <div class="list">
-                    <li><a href="#">Spa Zone</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
+                <div>
+                <label for="phone">Phone</label> <br>
+                <input type="number" id="phone" name="phone" placeholder="phone number" required="required">
                 </div>
 
-                <div class="list">
-                    <li><a href="#">Nailed It!</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
+                <div>
+                    <label for="store">Store</label> <br>
+                    <input type="text" id="store" name="store" placeholder="name of store" required="required">
                 </div>
 
-                <div class="list">
-                    <li><a href="#">Bibyonce</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
+                <div>
+                    <label for="service">Service</label> <br>
+                    <input type="text" id="service" name="service" placeholder="service required" required="required">
                 </div>
 
-                <div class="all">
-                    <a href="#">See all...</a>
-                </div>
-            </ul>
-        </div>
-
-        <div class="profile__card">
-            <h3>Stores You Might Like</h3>
-            <ul>
-                <div class="list">
-                    <li><a href="#">Hair by Gerald</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
+                <div>
+                    <label for="time">Time</label> <br>
+                    <input type="time" id="time" name="time" required="required">
                 </div>
 
-                <div class="list">
-                    <li><a href="#">Spa Zone</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
+                <div>
+                    <label for="date">Date</label> <br>
+                    <input type="date" id="date" name="date" required="required">
                 </div>
 
-                <div class="list">
-                    <li><a href="#">Diana Signature Makeover</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
+                <div>
+                    <label for="information">And Additional information?</label> <br>
+                    <input type="text" id="information" name="information">
                 </div>
+            </form>
 
-                <div class="list">
-                    <li><a href="#">Bibyonce</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
+            <div class="signup__form__end">
+                <p style="text-align: center;">Your details will be passed across to the vendor and you'll be contacted as soon as possible</p>
+                <button class="btn">BOOK</button>
                 </div>
-                
-                <div class="all">
-                    <a href="#">See all...</a>
-                </div>
-            </ul>
         </div>
     </div>
+    </div>
     
-    <script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
-    <script src="../../index.js"></script>
 </body>
+<script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
 </html>

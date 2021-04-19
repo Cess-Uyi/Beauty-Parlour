@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Dancing+Script:wght@400;500;600&display=swap"  rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/UI/images/logo.jpg">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Admin Profile</title>
+    <title>Stores</title>
 </head>
 
 <body class="profile">
@@ -17,6 +17,7 @@
                 <a href="../../index.html"><img src="/UI/images/logo.jpg" class="nav__logo" alt="CBP Logo"></a>
 
                 <li class="nav__item big-screen"><a class="nav__link" href="#">Wigs</a></li>
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Weaves</a></li>
                 <li class="nav__item big-screen"><a class="nav__link" href="#">Spa</a></li>
                 <li class="nav__item big-screen"><a class="nav__link" href="#">Nails</a></li>
                 <li class="nav__item big-screen"><a class="nav__link" href="#">Makeup</a></li>
@@ -25,6 +26,7 @@
                     <li class="nav__item dropdown__nav__item dropdown__nav__item-main"><a class="nav__link dropdown__main" href="#">Our Services<i class="fas fa-caret-down" style="font-size: 1.8rem; margin-left: .3rem;" ></i></a></li>
                 <div class="dropdown__content">
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Wigs</a></li>
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Weaves</a></li>
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Spa</a></li>
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Nails</a></li>
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Makeup</a></li>
@@ -34,9 +36,10 @@
         </nav>
     </div>
 
-    <div class="side-nav"  id="sidenav">
+    
+    <div class="side-nav"  id="side-nav">
 
-        <i class="fas fa-times exit-side-nav"></i>
+        <i class="fas fa-times exit-side-nav" id="close-btn" onclick="closeNav()"></i>
         <input type="text" placeholder="Search..." class="searchbar">
 
         <div class="profile">
@@ -61,48 +64,90 @@
         </div>
     </div>
 
-    <div class="dashboard">
-        <i class="fas fa-bars open-side-nav toggle-btn"></i>
+    <div class="stores__body">
+    <div class="stores__template">
+        <div class="stores__table">
+            <i id="open-btn" class="fas fa-bars open-side-nav toggle-btn" onclick="openNav()"></i>
 
-        <div class="admin__header">
-            <p class="admin__header__text">Beauty Parlour</p>
+            <table>
+                <caption>Stores(5)</caption>
+                <tr>
+                    <th>Store</th>
+                    <th>Service(s)</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Date Registered</th>
+                    <th>Manage</th>
+                </tr>
+
+                <tr>
+                    <td>Hair by Gerald</td>
+                    <td>Salon</td>
+                    <td>58A Bourdillon Road, Ikoyi, Lagos</td>
+                    <td>09023846296</td>
+                    <td>14/03/2021</td>
+                    <td>
+                        <button class="btn">Suspend</button>
+                        <button class="btn">Deactivate</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Spa Zone</td>
+                    <td>Skincare & Traditional Spa</td>
+                    <td>32B Alhaji Abass Street, Ojota, lagos</td>
+                    <td>07024839902</td>
+                    <td>14/03/2021</td>
+                    <td>
+                        <button class="btn">Suspend</button>
+                        <button class="btn">Deactivate</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Diana Signature Makeover</td>
+                    <td>Makeup</td>
+                    <td>3A Gbenga Ademulegun Lane, Parkview Estate, Lagos</td>
+                    <td>08136290674</td>
+                    <td>14/03/2021</td>
+                    <td>
+                        <button class="btn">Suspend</button>
+                        <button class="btn">Deactivate</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nailed It!</td>
+                    <td>Nail Studio</td>
+                    <td>The Residence, 12 Banana Island Road, Lagos</td>
+                    <td>07057859367</td>
+                    <td>13/03/2021</td>
+                    <td>
+                        <button class="btn">Suspend</button>
+                        <button class="btn">Deactivate</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Bibyonce</td>
+                    <td>Makeup</td>
+                    <td>15, Ekosodin Road, Opposite KFC, Uselu, Benin City</td>
+                    <td>01 246 7935</td>
+                    <td>11/03/2021</td>
+                    <td>
+                        <button class="btn">Suspend</button>
+                        <button class="btn">Deactivate</button>
+                    </td>
+                </tr>
+
+            </table>
         </div>
-
-        <div class="profile__card">
-            <h3>View All Stores(35)</h3>
-            <ul>
-                <div class="list">
-                    <li><a href="#">Hair by Gerald</a></li>
-                    <a href="#"><button class="btn">Manage</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Spa Zone</a></li>
-                    <a href="#"><button class="btn">Manage</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Diana Signature Makeover</a></li>
-                    <a href="#"><button class="btn">Manage</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Bibyonce</a></li>
-                    <a href="#"><button class="btn">Manage</button></a>
-                </div>
-
-                <div class="all">
-                    <a href="#">See all...</a>
-                </div>
-            </ul>
-        </div>
-        
-        <div class="vendor__button">
-            <button>View All Users</button>
-        </div>
-
     </div>
-    
+</div>
+
+
     <script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
+    <script src="../../index.js"></script>
+
 </body>
 </html>

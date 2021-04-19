@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Dancing+Script:wght@400;500;600&display=swap"  rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/UI/images/logo.jpg">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Client Profile</title>
+    <title>History</title>
 </head>
 
 <body class="profile">
@@ -35,6 +35,7 @@
     </div>
 
     <div class="side-nav" id="side-nav">
+
         <i class="fas fa-times exit-side-nav" id="close-btn" onclick="closeNav()"></i>
         <input type="text" placeholder="Search..." class="searchbar">
 
@@ -60,74 +61,56 @@
         </div>
     </div>
 
-    
-        
+    <div class="history__body">
 
-    <div class="dashboard" id="dashboard">
-        <i id="open-btn" class="fas fa-bars open-side-nav toggle-btn" onclick="openNav()"></i>
+    <div class="history__template">
+        <div class="history__table">
+            <i id="open-btn" class="fas fa-bars open-side-nav toggle-btn" onclick="openNav()"></i>
 
-        <div class="header">            
-            <p class="welcome__text">Welcome Back Jane!</p>
-        </div>
+            <table>
+                <caption>History</caption>
+                <tr>
+                    <th>Client</th>
+                    <th>Vendor</th>
+                    <th>Service</th>
+                    <th>Cost</th>
+                    <th>Date and Time</th>
+                </tr>
 
-        <div class="profile__card">
-            <h3>Recent History</h3>
-            <ul>
-                <div class="list">
-                    <li><a href="#">Hair by Gerald</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
+                <tr>
+                    <td>Jane Doe</td>
+                    <td>Hair by Gerald</td>
+                    <td>Weave Install</td>
+                    <td>#3,000</td>
+                    <td>14/03/2021 <br>
+                    18:22</td>
+                </tr>
 
-                <div class="list">
-                    <li><a href="#">Spa Zone</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
+                <tr>
+                    <td>Jane Doe</td>
+                    <td>Nailed It</td>
+                    <td>Acrylics</td>
+                    <td>#7,500</td>
+                    <td>14/03/2021 <br>
+                    02:22</td>
+                </tr>
 
-                <div class="list">
-                    <li><a href="#">Nailed It!</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Bibyonce</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="all">
-                    <a href="#">See all...</a>
-                </div>
-            </ul>
-        </div>
-
-        <div class="profile__card">
-            <h3>Stores You Might Like</h3>
-            <ul>
-                <div class="list">
-                    <li><a href="#">Hair by Gerald</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Spa Zone</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Diana Signature Makeover</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Bibyonce</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-                
-                <div class="all">
-                    <a href="#">See all...</a>
-                </div>
-            </ul>
+                <tr>
+                    <td>Jane Doe</td>
+                    <td>Diana Signature Makeover</td>
+                    <td>Owambe Makeup</td>
+                    <td>#5, 000</td>
+                    <td>13/03/2021 <br>
+                    17:37</td>
+                </tr>
+            </table>
         </div>
     </div>
+</div>
+
+
+
+
     
     <script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
     <script src="../../index.js"></script>

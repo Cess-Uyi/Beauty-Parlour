@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Dancing+Script:wght@400;500;600&display=swap"  rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/UI/images/logo.jpg">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Login</title>
+    <title>Stores</title>
 </head>
 
-<body class="signup__body">
+<body class="stores__body">
     <div class="main user__main">
         <nav>
             <ul class="nav">
@@ -32,46 +32,61 @@
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Makeup</a></li>
                 </div>
                 </div>
-
-                <div class="nav__signup ">
-                    <li class="nav__item nav__item--right"><a class="nav__link" href="#">Sign Up<i class="fas fa-caret-down nav__icon" style="font-size: 1.8rem; margin-left: .3rem; margin-top: .4rem;" ></i></a></li>
-                   <div class="nav__signup__content">
-                       <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="UI/user/us_index.html">Client</a></li>
-                       <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="UI/vendor/vd_index.html">Vendor</a></li>
-                   </div>
-               </div>
-
-               <li class="nav__item"><a class="nav__link" href="#" style="display: none;">Login</a></li> 
             </ul>
         </nav>
     </div>
 
-    <div class="card">
-        <div class="card__body login__card__body">
-            <div class="login__img">
-                <img src="../images/svg-login.svg">
-            </div>
+    <div class="stores__template" style="margin-top: 3rem;">
+        <div class="stores__table">
+            <table>
+                <caption>Stores(5)</caption>
+                <tr>
+                    <th>Store</th>
+                    <th>Service(s)</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                </tr>
 
-            <form action="" class="login__form">
-                <div class="login__form__email">
-                    <label for="email">Email</label> <br>
-                    <input type="email" id="email" name="email" placeholder="email" required="required">
-                    </div> <br>
-    
-                    <div class="login__form__password">
-                    <label for="password">Password</label> <br>
-                    <input type="password" id="password" name="password" placeholder="password" required="required">
-                    </div>
-            </form>
+                <tr>
+                    <td>Hair by Gerald</td>
+                    <td>Salon</td>
+                    <td>58A Bourdillon Road, Ikoyi, Lagos</td>
+                    <td>09023846296</td>
+                </tr>
 
-            <div class="login__form__end">
-                <a href="./forgot-password.html">Forgot your password?</a><br>
-                <button class="btn login__form__end__btn">Log in</button>
-            </div>
-        
+                <tr>
+                    <td>Spa Zone</td>
+                    <td>Skincare & Traditional Spa</td>
+                    <td>32B Alhaji Abass Street, Ojota, Lagos</td>
+                    <td>07024839902</td>
+                </tr>
+
+                <tr>
+                    <td>Diana Signature Makeover</td>
+                    <td>Makeup</td>
+                    <td>3A Gbenga Ademulegun Lane, Parkview Estate, Lagos</td>
+                    <td>08136290674</td>
+                </tr>
+
+                <tr>
+                    <td>Nailed It!</td>
+                    <td>Nail Studio</td>
+                    <td>The Residence, 12 Banana Island Road, Lagos</td>
+                    <td>07057859367</td>
+                </tr>
+
+                <tr>
+                    <td>Bibyonce</td>
+                    <td>Makeup</td>
+                    <td>15, Ekosodin Road, Opposite KFC, Uselu, Benin City</td>
+                    <td>01 246 7935</td>
+                </tr>
+
+            </table>
         </div>
     </div>
-]
-<script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
 </body>
 </html>

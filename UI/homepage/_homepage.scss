@@ -4,21 +4,26 @@ $font-three: 'Roboto';
 
 $color-brown-1: #6D5D4B;
 $color-brown-2: #54483A;
-$color-nude: #faefe7;
-$color-black-transparent: rgba(#000, 0.4);
-$color-yellow: rgb(221, 221, 57);
+$color-nude: #9F8469;
+// $color-black-transparent: rgba(#000, 0.4);
 $color-grey: #eee;
 $color-grey-light: #999;
 $color-grey-dark: #303030;
 $color-pink: #ddb3c2;
 $color-pink-light: #f8eadf;
-$color-purple: #786fa6;
+$color-purple: #7a2be2;
+$color-purple-light: #ffe7ff;
+
 
 $bp-largest: 75em; //1200px
 $bp-large:68.75em; //1100px
 $bp-medium:56.25em; //900px
 $bp-small:37.5em; //600px
 $bp-smallest:25em; //400px
+
+a:focus{
+    outline: none;
+}
 
 *,
 *::before,
@@ -34,8 +39,8 @@ html{
 
 body{
     font-family: $font-primary;
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 300;
     line-height: 1.6;
 }
 
@@ -81,31 +86,30 @@ nav{
 }
 
 .nav{
-    // background-color: $color-black-transparent;
     background-color: $color-grey;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     height: 5rem;
 
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     letter-spacing: .2rem;
     list-style: none;
 
     @media screen and (max-width:700px){
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         letter-spacing: .1rem;
     }
 
     @media screen and (max-width:$bp-smallest){
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     &__item{
-        margin-right: 2rem;
+        margin-right: 1.5rem;
 
         @media screen and (max-width:700px){
-            margin-right: 1.5rem;
+            margin-right: 1rem;
         }
 
         @media screen and (max-width:$bp-smallest){
@@ -125,7 +129,7 @@ nav{
     }
 
     &__link:hover{
-            color: $color-yellow;
+            color: $color-purple;
     }
 
     &__link:focus-visible{
@@ -134,7 +138,7 @@ nav{
 
     &__signup{
         align-self: flex-start;
-        margin-top: 1.25rem;
+        margin-top: 1rem;
         margin-left: auto;
         z-index: 2;
 
@@ -147,7 +151,7 @@ nav{
         }
 
         &__content{
-            background-color: $color-brown-1;
+            background-color: $color-grey;
             margin-top: .9rem;
             display: none;
 
@@ -178,7 +182,7 @@ nav{
     }
   
     &__content{
-        background-color: $color-brown-1;
+        background-color: $color-grey;
         display: none;
     }
 
@@ -210,13 +214,13 @@ nav{
         &__link:visited{
             text-decoration: none;
             text-transform: uppercase;
-            color: $color-grey;
+            color: $color-brown-1;
             display: block;
             width: 100%;
         }
     
         &__link:hover{
-                color: $color-yellow;
+                color: $color-purple;
         }
     }
 }
@@ -232,20 +236,20 @@ nav{
     }
 
     &__main{
-        font-size: 5rem;
+        font-size: 4rem;
         margin: 3rem 0 -1rem 0;
 
         @media screen and (max-width:$bp-small){
-            font-size: 4rem;
+            font-size: 3rem;
         }
         }
 
     &__sub{
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-family: $font-secondary;
 
         @media screen and (max-width:$bp-small){
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
     }
 }
@@ -254,7 +258,7 @@ nav{
     margin: 1rem;
     grid-row: 3 / 4;
     grid-column: 2 / 3;
-    font-size: 2.2rem;
+    font-size:1.7rem;
 
     @media screen and (max-width:750px){
         grid-column: 2 / 4;
@@ -270,18 +274,23 @@ nav{
 }
 
 .btn{
-    background-color: $color-yellow;
-    box-shadow: 2px 2px 5px $color-brown-2;
-    color: $color-brown-2;
+    background-image: linear-gradient(to bottom right, #a7907a, $color-nude, $color-brown-1);
+    box-shadow: 1px 2px 5px $color-purple;
+    color: $color-grey;
     border: none;
     font-family: $font-primary;
-    font-weight: 600;
-    font-size: 1.8rem;
-    text-transform: uppercase;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: all .2s;
+
+    &:hover{
+        transform: translateY(-.2rem);
+    }
+
+    &:active{
+        transform: translateY(.2rem);
+    }
     
     & > *{
             display: inline-block;
@@ -315,12 +324,21 @@ nav{
         }
 
        &__introtext{
-           margin-top: 1.5rem; 
+           margin-top: 1.5rem;
+           font-weight: 400;
+           font-size: 1.5rem;
+
+           a,
+           a:visited{
+            text-decoration: none;
+            color: $color-grey;
+            text-transform: uppercase;
+           }
        }
 }
 
 .bestsellers{
-    padding: 3vw 0;
+    padding: 4vw 0;
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 7vw 1fr 7vw;
@@ -330,6 +348,7 @@ nav{
         grid-column: 2 / 3;
         color: $color-purple;
         font-size: 4.5vw;
+        font-weight: 200;
         text-align: center;
 
         @media screen and (max-width:$bp-small){
@@ -343,6 +362,7 @@ nav{
     grid-column: 2 / 3;
     color: $color-purple;
     font-size: 3vw;
+    font-weight: 200;
 
     @media screen and (max-width:$bp-small){
         font-size: 2.5rem;
@@ -354,7 +374,8 @@ nav{
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2.5vw;
+    grid-gap: 2vw;
+    margin-bottom: 2vw;
 }
 
 .wigs__header{
@@ -378,12 +399,14 @@ nav{
 }
 
 .product{
-    border: 1rem solid $color-nude;
-    background-color: $color-nude;
-    height: 45rem;
+    border: 1rem solid $color-pink;
+    background-color: $color-pink;
+    height: 35rem;
     text-align: center;
     color: $color-brown-2;
-    font-weight: 600;
+    display: flex;
+    align-content: center;
+    j
 
     &__image{
         height: 30rem;
@@ -609,19 +632,53 @@ nav{
     grid-column: 1 / -1;
     background-color: $color-grey-dark;
     color: $color-grey;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 3rem 0;
 
-    display: grid;
-    grid-template-columns: 7vw 1fr 7vw;
+    h5{
+        font-size: 1.5rem;
+    }
 
     &__content{
-        grid-column: 2 / 3;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 7vw 3fr 2fr 7vw;
+        grid-gap: 2rem;
+    }
 
-        @media screen and (max-width: $bp-small){
-            flex-direction: column;
+    &__about{
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+    }
+
+    &__contact{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        @media screen and (max-width:$bp-small){
+            grid-column: 2 / 4;
+        }
+
+        i{
+            margin-right: 1rem;
+        }
+    }
+
+    &__connect{
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+
+        @media screen and (max-width:$bp-small){
+            grid-column: 2 / 4;
+            grid-row: 3 / 4;
+        }
+
+        ul{
+            display: flex;
+            font-size: 2rem;
+
+            li:not(:last-child){
+                margin-right: 3rem;
+            }
         }
     }
 
@@ -646,29 +703,9 @@ nav{
     &__link:hover{
             color: #000;
     }
-
-    &__about{
-        flex: 3;
-    }
-
-    &__contact{
-        flex: 2;
-        margin: 0 2rem;
-
-        @media screen and (max-width: $bp-small){
-            margin: 2rem 0;
-        }
-    }
-
-    &__connect{
-        flex: 1;
-        text-align: center;
-
-        @media screen and (max-width: $bp-small){
-            text-align: start;
-        }
-    }
 }
+
+
 
 
 
@@ -680,7 +717,6 @@ nav{
 
         &__body{
             background-color: $color-grey !important;
-            border: .5rem solid $color-purple;
             border-radius: 1rem;
             margin: 0 10vw;
 
@@ -698,9 +734,8 @@ nav{
         grid-row: 2 / 3;
         grid-column: 2 / 3;
         justify-self: center;
-        height: 12rem;
+        height: 14rem;
         width: auto;
-        border: .5vw solid $color-purple;
     }
 
     &__form{
@@ -713,7 +748,7 @@ nav{
         div{
 
             label{
-                color: rgb(124, 59, 124);
+                color: $color-purple;
                 font-weight: 500;  
                 font-size: 1.7rem;
             }
@@ -738,6 +773,7 @@ nav{
             grid-row: 4 / 5;
             grid-column: 2 / 3;
             justify-self: center;
+            display: grid;
 
             a,
             a:visited{
@@ -749,13 +785,40 @@ nav{
                     text-decoration: underline;
                 }
             }
+            
+            p{
+                font-size: 1.5rem;
+                color: $color-grey-dark;
+            }
 
-            button{
+            &__btn{
                 margin: auto;
                 margin-top: 1rem;
                 width: 15rem;
                 height: 4rem;
+                justify-self: center;
             }
         }
     }
+}
+
+
+
+
+
+// FORGOT PASSWORD PAGE
+.fpw-btn{
+    margin: -1rem 0 1rem 0;
+    width: 20rem;
+    height: 4rem;
+    justify-self: center;
+}
+
+
+
+
+// BOOK NOW PAGE
+#information{
+    height: 10rem;
+    resize: none;
 }

@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Dancing+Script:wght@400;500;600&display=swap"  rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/UI/images/logo.jpg">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Client Profile</title>
+    <title>Messages</title>
 </head>
 
 <body class="profile">
@@ -60,75 +60,54 @@
         </div>
     </div>
 
-    
+    <div class="message__body">
+
+    <div class="message__template">
+        <div class="message__table">
+            <i id="open-btn" class="fas fa-bars open-side-nav toggle-btn" onclick="openNav()"></i>
         
+            <table>
+                <caption>Messages</caption>
+                <tr>
+                    <th>Sender</th>
+                    <th>Message</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                </tr>
 
-    <div class="dashboard" id="dashboard">
-        <i id="open-btn" class="fas fa-bars open-side-nav toggle-btn" onclick="openNav()"></i>
+                <tr>
+                    <td>Hair by Gerald</td>
+                    <td>This is to confirm your 09:00 weave install appointment on the 23rd of March. The cost is #3,000. We encourage all clients to be there at the arranged time</td>
+                    <td>20:22</td>
+                    <td>14/03/2021</td>
+                </tr>
 
-        <div class="header">            
-            <p class="welcome__text">Welcome Back Jane!</p>
-        </div>
+                <tr>
+                    <td>Nailed It!</td>
+                    <td>Thank you for visiting our store. We look forward to seeing you again.</td>
+                    <td>14:36</td>
+                    <td>14/03/2021</td>
+                </tr>
 
-        <div class="profile__card">
-            <h3>Recent History</h3>
-            <ul>
-                <div class="list">
-                    <li><a href="#">Hair by Gerald</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
+                <tr>
+                    <td>Diana Signature Makeover</td>
+                    <td>Sorry. We are already booked on the 16th of March by 12pm. However, we have free slots from 2pm till 5pm and 7pm till 9pm which is our closing hour. Kindly let us know what time is convenient for you so we can reschedule.</td>
+                    <td>08:32</td>
+                    <td>14/03/2021</td>
+                </tr>
 
-                <div class="list">
-                    <li><a href="#">Spa Zone</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Nailed It!</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Bibyonce</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="all">
-                    <a href="#">See all...</a>
-                </div>
-            </ul>
-        </div>
-
-        <div class="profile__card">
-            <h3>Stores You Might Like</h3>
-            <ul>
-                <div class="list">
-                    <li><a href="#">Hair by Gerald</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Spa Zone</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Diana Signature Makeover</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-
-                <div class="list">
-                    <li><a href="#">Bibyonce</a></li>
-                    <a href="../homepage/book.html"><button class="btn">Book</button></a>
-                </div>
-                
-                <div class="all">
-                    <a href="#">See all...</a>
-                </div>
-            </ul>
+                <tr>
+                    <td>Spa Zone</td>
+                    <td>Good day Jane. Unfortunately, we do not offer erotic massages. However we offer full body massages which is very similar to the erotic massges. Please visit our profile to see our full list of services. Thank you</td>
+                    <td>20:48</td>
+                    <td>13/03/2021</td>
+                </tr>
+            </table>
         </div>
     </div>
-    
+</div>
+
+
     <script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
     <script src="../../index.js"></script>
 </body>

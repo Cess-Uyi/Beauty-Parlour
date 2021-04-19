@@ -1,7 +1,7 @@
 ##Beauty Parlour
 This is a beauty parlour that links clients with different vendors offering beauty services.
 There are three different categories of people who use this website;
->Super Admin
+>Admin
 
 >Vendors
 

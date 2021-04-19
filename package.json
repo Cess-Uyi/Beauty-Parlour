@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass UI/sass/main.scss UI/css/main.css -w",
-    "live": "live-server --browser=firefox",
+    "live": "live-server",
     "start": "npm-run-all --parallel compile:sass live"
   },
   "author": "Uyi",
