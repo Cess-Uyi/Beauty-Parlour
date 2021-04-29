@@ -1,0 +1,514 @@
+.signup__body{
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($color-brown-1, 0.6),
+        rgba($color-brown-2, 0.6)),
+        url(../images/salon-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.user__main{
+    height: 5rem;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 15vw 1fr 15vw;
+    grid-template-rows: 3vw 1fr 3vw;
+
+    &__body{
+        // background-color: rgba(#eee, 0.4);
+        background-color: $color-grey;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        @media screen and (max-width:450px){
+            grid-column: 1 / -1;
+        }
+
+        display: grid;
+        grid-template-columns: 10vw 1fr 10vw;
+        grid-template-rows: 5vw max-content 1fr 5vw;
+    }
+}
+
+.signup__form{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: max-content;
+    grid-gap: 2rem;
+    justify-content: center;
+
+ div{
+
+    label{
+        color: rgb(124, 59, 124);
+        font-weight: 500;  
+        font-size: 1.4rem;
+    }
+
+    input{
+        width: 90%;
+        padding: .4rem;
+        height: 3rem;
+        font-size: 1.2rem;
+        box-sizing: border-box;
+        border: .1rem solid $color-grey-light;
+        border-radius: .5rem;
+
+        &:focus{
+            outline: none;
+            border: .15rem solid $color-purple;
+        }
+
+        // &:focus:invalid{
+        //     border-bottom: 2px solid red;
+        // }
+    }
+ }
+
+ &__end{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    align-self: end;
+    display: grid;
+    margin: 1rem 0;
+
+    p{
+        font-size: 1.3rem;
+        color: $color-grey-dark;
+
+        a,
+        a:visited{
+            text-decoration: none;
+            color: indianred;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    button{
+        width: 12rem;
+        height: 3rem;
+        justify-self: center;
+        margin-top: .5rem;
+    }
+ }
+}
+
+.input-checkbox{
+    width: 4% !important;
+}
+
+
+
+
+// USER PROFILE PAGE
+
+.profile{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
+
+
+
+
+// SIDE NAV
+.side-nav{
+    border-right: .5rem solid $color-brown-1;
+
+    .exit-side-nav{
+        font-size: 2rem;
+        // display: flex;
+        // justify-self: end;
+        float: right;
+        margin: .5rem 1.5rem 2rem 0;
+
+        &:hover{
+            color: $color-purple;
+        }
+
+        @media screen and (min-width: 900px){
+            display: none !important;
+        }
+    }
+
+    grid-column: 1 / 2;
+    display: grid;
+    align-content: flex-start;
+
+    width: 20rem;
+    padding: 0 0 2rem 0;
+    color: $color-grey-dark;
+
+
+    .searchbar{
+        padding: .5rem 1rem;
+        margin: 2rem 1rem .5rem 1rem;
+        height: 2.5rem;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        border: .1rem solid $color-brown-1;
+    }
+
+    .profile{
+        justify-self: center;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__pic{
+            height: 10rem;
+            width: 10rem;
+
+            img{
+                object-fit: cover;
+                border: .3rem solid $color-brown-1;
+                border-radius: 50%;
+            }
+        }
+
+        &__name{
+            font-size: 1.7rem;
+            margin-bottom: -.3rem;
+        }
+
+        a{
+            font-size: 1rem;
+            color: $color-brown-1;
+            text-decoration: none;
+
+            &:hover{
+                color: $color-purple;
+            }
+        }
+    }
+
+    &__options{
+        margin-top: 1.2rem;
+
+        .options__list{
+
+            &-items{
+                height: 2.7rem;
+                &:hover{
+                    background-color: $color-purple-light;
+                    color: $color-purple;
+                }
+                
+                a{
+                    color: inherit;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    margin: 0 2rem;
+                    width: 100%;
+
+                    i{
+                        margin-right: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// BODY
+.dashboard{
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-content: flex-start;
+    margin: 1rem 3vw;
+    grid-gap: 1vw;
+}
+
+.open-side-nav{
+    font-size: 2.5rem;
+    color: $color-grey-dark;
+    grid-column: 1 / -1;
+    width: 3rem;
+    cursor: pointer;
+
+    &:hover{
+        color: $color-purple;
+    }
+
+    @media screen and (min-width: 900px){
+        display: none !important;
+    }
+}
+
+#side-nav{
+    
+    @media screen and (max-width: 900px){
+        display: none;
+    }
+}
+
+    #side-nav.active{
+        visibility: visible;
+            display: block !important;
+    }
+
+
+.header{
+    grid-column: 1 / -1;
+    height: 8rem;
+    background-color: $color-brown-1;
+    display: flex;
+    align-content: center;
+    padding-left: 5vw;
+}
+
+.welcome__text{
+    grid-column: 3 / 4;
+    justify-self: end;
+    align-self: center;
+    font-size: 2rem;
+    color: $color-grey;
+
+    @media screen and (max-width:$bp-small){
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+}
+
+.profile__card{
+    background-color: #fff;
+    padding: 2rem 2rem;
+    box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, 0.5);
+    border-radius: 1.5rem;
+
+    @media screen and (max-width:$bp-smallest){
+        width: 80vw;
+    }
+
+    h3{
+        color: $color-grey-dark;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    ul{
+        list-style: none;
+        font-size: 1.2rem;
+
+        .list{
+            display: flex;
+        }
+
+    .all{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+
+        a{
+            color: $color-brown-1;
+            float: right;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    }
+
+    li{
+        display: inline-block;
+        margin-bottom: .5rem;
+
+        @media screen and (max-width:$bp-smallest){
+            font-size: 1.3rem;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: $color-brown-2;
+        margin: auto 0 auto auto;
+
+        &:hover{
+            color: $color-purple;
+        }
+
+        button{
+            min-width: 8rem;
+            height: 3rem;
+            padding: .3rem .6rem;
+        }
+    }
+
+    .button-link{
+        margin: auto 0 auto auto;
+    }
+    
+    .profile__card-btn-link{
+        height: 3rem;
+        width: 7rem;
+        margin: auto 0 auto auto;
+        padding: .3rem .6rem;
+        float: right;
+    }
+}
+
+
+
+
+// MESSAGES
+.message__body,
+.history__body,
+.pend-app__body,
+.stores__body{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 4vw 1fr 4vw;
+    grid-template-rows: 3vw 1fr 3vw;
+
+    @media screen and (max-width:$bp-medium){
+        width: 100vw;
+    }
+}
+
+.message__template,
+.history__template,
+.pend-app__template,
+.stores__template{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #fff;
+    justify-self: center;
+
+
+    @media screen and (max-width:$bp-small){
+        grid-column: 1 / -1;
+        margin: 0 1rem 0 1rem;
+    }
+}
+
+table, th, td {
+    border: .1rem solid $color-grey-dark;
+    padding: 1.5rem;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+
+    @media screen and (max-width:$bp-small){
+        padding: .5rem;
+    }
+  }
+
+tr:nth-child(even) {
+    background-color: rgb(250, 240, 240);
+}
+
+
+tr:hover{
+    background-color: $color-pink;
+}
+
+th{
+    background-color: $color-brown-1;
+    color: $color-grey;
+}
+
+
+
+
+// INNER PROFILE
+.inner-profile{
+    display: grid;
+    grid-template-columns: 10vw 1fr 10vw;
+    grid-template-rows: 3vw 1fr 3vw;
+
+    @media screen and (max-width: $bp-medium){
+        width: 100vw;
+    }
+
+    &__body{
+        background-color: $color-grey;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        @media screen and (max-width:450px){
+            grid-column: 1 / -1;
+        }
+
+        display: grid;
+        grid-template-columns: 5vw 1fr 5vw;
+        grid-template-rows: 2vw max-content 1fr 2vw;
+
+        form{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            grid-template-rows: max-content;
+            grid-gap: 1vw;
+            justify-content: center;
+        }
+    }
+    
+    div{
+
+        label{
+            color: $color-purple;
+            font-weight: 300;  
+            font-size: 1.4rem;
+        }
+
+        input{
+            width: 90%;
+            padding: .5rem;
+            height: 3rem;
+            font-size: 1.2rem;
+            box-sizing: border-box;
+            border: .1rem solid $color-grey-light;
+            border-radius: .4rem;
+
+            &:focus{
+                outline: none;
+                border: .15rem solid $color-purple;
+            }
+        }
+    }
+
+    &__end{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        align-self: end;
+        display: grid;
+        margin: 1rem 0;
+
+        p{
+            font-size: 1.5rem;
+            color: $color-grey-dark;
+
+            a,
+            a:visited{
+                text-decoration: none;
+                color: indianred;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        button{
+            width: 15rem;
+            height: 4rem;
+            justify-self: center;
+            margin-top: .5rem;
+        }
+    }
+}

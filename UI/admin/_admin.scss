@@ -1,0 +1,44 @@
+.admin{
+
+    &__header{
+        grid-column: 1 / -1;
+        height: 8rem;
+        background-image: linear-gradient(
+        to bottom right,
+        rgba($color-brown-1, 0.6),
+        rgba($color-brown-2, 0.6)),
+        url(../images/salon-img.jpg);
+        background-size: cover;
+        background-position: center;
+        color: $color-grey;
+
+        display: grid;
+        grid-template-columns: 10vw 1fr 10vw;
+        align-content: center;
+
+        &__text{
+            grid-column: 2 / 3;
+            font-size: 4rem;
+
+            @media screen and (max-width:$bp-small){
+                font-size: 3rem;
+            }
+
+            @media screen and (max-width:450px){
+                font-size: 2rem;
+                grid-column: 1 / -1;
+                justify-self: center;
+            }
+        }
+    }
+}
+
+
+.stores__table{
+    td{
+        button{
+            width: 8rem;
+            height: 3rem;
+        }
+    }
+}

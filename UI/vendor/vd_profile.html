@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Dancing+Script:wght@400;500;600&display=swap"  rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/UI/images/logo.jpg">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Vendor Profile</title>
+</head>
+
+<body class="profile">
+    <div class="main user__main">
+        <nav>
+            <ul class="nav">
+                <a href="../../index.html"><img src="/UI/images/logo.jpg" class="nav__logo" alt="CBP Logo"></a>
+
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Wigs</a></li>
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Salon</a></li>
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Nails</a></li>
+                <li class="nav__item big-screen"><a class="nav__link" href="#">Makeup</a></li>
+
+                <div class="dropdown">
+                    <li class="nav__item dropdown__nav__item dropdown__nav__item-main"><a class="nav__link dropdown__main" href="#">Our Services<i class="fas fa-caret-down" style="font-size: 1.8rem; margin-left: .3rem;" ></i></a></li>
+                <div class="dropdown__content">
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Wigs</a></li>
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Salon</a></li>
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Nails</a></li>
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Makeup</a></li>
+                </div>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="side-nav" id="side-nav">
+
+        <i class="fas fa-times exit-side-nav" id="close-btn" onclick="closeNav()"></i>
+        <input type="text" placeholder="Search..." class="searchbar">
+
+        <div class="profile">
+            <div class="profile__pic">
+                <img src="../images/spazone_logo.png" alt="dp">
+            </div>
+            <div class="profile__name">
+                <p>Spa Zone</p>
+            </div>
+            <p style="font-size: 1.2rem;">Skincare and Traditional Spa</p>
+            <div class="star-icon">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="#" style="font-size: 1.2rem;">278 reviews</a>
+            <a href="#">Edit Profile <i class="fas fa-pen"></i></a>
+        </div>
+
+        <div class="side-nav__options">
+            <ul class="options__list">
+                <li class="options__list-items"><a href="./vd_pend-app.html" class="options__list-items-link"><i class="fas fa-ellipsis-h"></i> Pending Appointments</a></li>
+                <li class="options__list-items"><a href="../user/us_messages.html" class="options__list-items-link"><i class="fas fa-comments message-icon"></i> Messages</a></li>
+                <li class="options__list-items"><a href="../user/us_activity.html" class="options__list-items-link"><i class="fas fa-history"></i> Appointment History</a></li>
+                <li class="options__list-items"><a href="./vd_index.html" class="options__list-items-link"><i class="fas fa-dollar-sign"></i> Open Another Store</a></li>
+                <!-- <li class="options__list-items"><a href="#" class="options__list-items-link"></a></li>
+                <li class="options__list-items"><a href="#" class="options__list-items-link"></a></li> -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <i id="open-btn" class="fas fa-bars open-side-nav toggle-btn" onclick="openNav()"></i>
+
+        <div class="vd__gallery">
+            <div class="images">
+                <img src="../images/carousel__spa.jpg" alt="Carousel Pictures">
+            </div>
+            <form class="vd__gallery__upload">
+                <label for="uploadfile">Upload photos</label><br>
+                <input type="file" name="myfile">
+            </form>
+        </div>
+
+        
+
+        <div class="profile__card">
+            <h3>Pending Appointments(13)</h3>
+            <ul>
+                <div class="list">
+                    <li><a href="#">Dolapo</a></li>
+                    <div class="button-link">
+                        <a href="#"><button class="btn accept-btn">Accept</button></a>
+                        <a href="#"><button class="btn decline-btn">Decline</button></a>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <li><a href="#">Kemi</a></li>
+                    <div class="button-link">
+                        <a href="#"><button class="btn accept-btn">Accept</button></a>
+                        <a href="#"><button class="btn decline-btn">Decline</button></a>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <li><a href="#">Prince</a></li>
+                    <div class="button-link">
+                        <a href="#"><button class="btn accept-btn">Accept</button></a>
+                        <a href="#"><button class="btn decline-btn">Decline</button></a>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <li><a href="#">Gbenga</a></li>
+                    <div class="button-link">
+                        <a href="#"><button class="btn accept-btn">Accept</button></a>
+                        <a href="#"><button class="btn decline-btn">Decline</button></a>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <li><a href="#">Fuzitsai</a></li>
+                    <div class="button-link">
+                        <a href="#"><button class="btn accept-btn">Accept</button></a>
+                        <a href="#"><button class="btn decline-btn">Decline</button></a>
+                    </div>
+                </div>
+
+                <div class="all">
+                    <a href="#">See all...</a>
+                </div>
+            </ul>
+        </div>
+
+        <div class="profile__card">
+            <h3>Recent History</h3>
+            <ul>
+                <div class="list">
+                    <li><a href="#">Uyi</a></li>
+                    <a href="#"><button class="btn">Message</button></a>
+                </div>
+
+                <div class="list">
+                    <li><a href="#">Dolapo</a></li>
+                    <a href="#"><button class="btn">Message</button></a>
+                </div>
+
+                <div class="list">
+                    <li><a href="#">Shola</a></li>
+                    <a href="#"><button class="btn">Message</button></a>
+                </div>
+
+                <div class="list">
+                    <li><a href="#">Timi</a></li>
+                    <a href="#"><button class="btn">Message</button></a>
+                </div>
+
+                <div class="list">
+                    <li><a href="#">Walter</a></li>
+                    <a href="#"><button class="btn">Message</button></a>
+                </div>
+
+
+                <div class="all">
+                    <a href="#">See all...</a>
+                </div>
+            </ul>
+        </div>
+
+        <div class="vendor__button">
+            <button>View All Appointment History</button>
+        </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
+    <script src="../../index.js"></script>
+
+</body>
+</html>

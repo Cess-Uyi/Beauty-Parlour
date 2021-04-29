@@ -1,0 +1,138 @@
+.signup__form{
+
+    &__category{
+
+        &__options{
+            display: flex;
+            width: 27rem;
+
+            label{
+                color: $color-grey-dark !important;
+                margin-top: .5rem;
+            }
+
+            input{
+
+                &:hover{
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// VENDOR PROFILE
+
+.fa-star{
+    color: $color-brown-1;
+}
+
+.vd{
+
+    &__gallery{
+        grid-column: 1 / -1;
+        background-color: $color-pink-light;
+        height: 12rem;
+        padding: 1rem;
+
+        display: grid;
+        grid-template-columns: 1fr min-content;
+
+        .images{
+            grid-column: 1 / 2;
+
+            img{
+                height: 10rem;
+                width: auto;
+            }
+        }
+
+        &__upload{
+            grid-column: 2 / 3;
+            justify-self: end;
+            align-self: center;
+    
+            label{
+                color: $color-brown-1;
+            }
+        }
+    }
+}
+
+.accept-btn {
+    background-image: none;
+    background-color: green;
+    color: $color-grey;
+}
+
+.decline-btn{
+    background-image: none;
+    background-color: red;
+    color: $color-grey;
+}
+
+.vendor__button{
+    justify-self: center;
+    align-self: center;
+
+    button{
+        min-width: 20rem;
+        height: 6rem;
+        padding: .3rem .6rem;
+        background-color: #eee;
+        color: $color-brown-1;
+        border: none;
+        box-shadow: .1rem .2rem .5rem $color-brown-1;
+        cursor: pointer;
+
+        &:hover{
+            color: $color-grey !important;
+            background-color: $color-brown-1;
+        }
+    }
+}
+
+
+
+
+
+// VENDOR PAGE
+.vendor-page{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 10vw 1fr 10vw;
+
+
+    &-carousel{
+        grid-column: 1 / -1;
+        height: 50rem;
+
+        img{
+            object-fit: cover;
+        }
+    }
+
+    &-body{
+        grid-column: 2 / 3;
+    }
+
+    &-profile{
+        margin-top: -10rem;
+        display: flex;
+        align-items: center;
+
+        img{
+            height: 15rem;
+            width: auto;
+            border: 2px solid brown;
+        }
+    }
+
+    &-about{
+        margin: 2rem 0 2rem;
+    }
+}
