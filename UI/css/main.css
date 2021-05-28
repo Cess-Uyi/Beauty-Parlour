@@ -534,7 +534,7 @@ nav {
   justify-self: center; }
 
 #information {
-  height: 10rem;
+  height: auto;
   resize: none; }
 
 .signup__body {
@@ -592,7 +592,8 @@ nav {
     margin: 1rem 0; }
     .signup__form__end p {
       font-size: 1.3rem;
-      color: #303030; }
+      color: #303030;
+      text-align: center; }
       .signup__form__end p a,
       .signup__form__end p a:visited {
         text-decoration: none;
@@ -825,6 +826,52 @@ th {
   background-color: #6D5D4B;
   color: #eee; }
 
+.btn-reply {
+  width: 4.5rem;
+  height: 2.3rem; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.modal-content {
+  background-color: #eee;
+  margin: 15% auto;
+  padding: 1rem;
+  border: 0.5rem solid #6D5D4B;
+  width: 80%; }
+  .modal-content label {
+    color: #7a2be2;
+    font-weight: 300;
+    font-size: 1.4rem; }
+  .modal-content input {
+    width: 100%;
+    padding: .5rem;
+    height: fit-content;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    border: 0.1rem solid #999;
+    border-radius: .4rem; }
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
+
 .inner-profile {
   display: grid;
   grid-template-columns: 10vw 1fr 10vw;
@@ -854,7 +901,8 @@ th {
     color: #7a2be2;
     font-weight: 300;
     font-size: 1.4rem; }
-  .inner-profile div input {
+  .inner-profile div input,
+  .inner-profile div .form_dropdown {
     width: 90%;
     padding: .5rem;
     height: 3rem;
@@ -862,7 +910,8 @@ th {
     box-sizing: border-box;
     border: 0.1rem solid #999;
     border-radius: .4rem; }
-    .inner-profile div input:focus {
+    .inner-profile div input:focus,
+    .inner-profile div .form_dropdown:focus {
       outline: none;
       border: 0.15rem solid #7a2be2; }
   .inner-profile__end {
@@ -922,11 +971,17 @@ th {
   background-image: none;
   background-color: green;
   color: #eee; }
+  .accept-btn-pendapp {
+    height: 2rem;
+    width: 5rem; }
 
 .decline-btn {
   background-image: none;
   background-color: red;
   color: #eee; }
+  .decline-btn-pendapp {
+    height: 2rem;
+    width: 5rem; }
 
 .vendor__button {
   justify-self: center;

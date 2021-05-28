@@ -24,8 +24,8 @@
                 <div class="dropdown">
                     <li class="nav__item dropdown__nav__item dropdown__nav__item-main"><a class="nav__link dropdown__main" href="#">Our Services<i class="fas fa-caret-down" style="font-size: 1.8rem; margin-left: .3rem;" ></i></a></li>
                 <div class="dropdown__content">
+                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Wigs</a></li>
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Salon</a></li>
-                    <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Spa</a></li>
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Nails</a></li>
                     <li class="nav__item dropdown__nav__item"><a class="dropdown__nav__link nav__link" href="#">Makeup</a></li>
                 </div>
@@ -41,25 +41,35 @@
 
         <div class="profile">
             <div class="profile__pic">
-                <img src="../images/dp.png" alt="dp">
+                <img src="../images/spazone_logo.png" alt="dp">
             </div>
             <div class="profile__name">
-                <p>Jane Doe</p>
+                <p>Spa Zone</p>
             </div>
+            <p style="font-size: 1.2rem;">Skincare and Traditional Spa</p>
+            <div class="star-icon">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="#" style="font-size: 1.2rem;">278 reviews</a>
             <a href="#">Edit Profile <i class="fas fa-pen"></i></a>
         </div>
 
         <div class="side-nav__options">
             <ul class="options__list">
-                <li class="options__list-items"><a href="../homepage/book.html" class="options__list-items-link"><i class="fas fa-edit"></i> Book Appointment</a></li>
-                <li class="options__list-items"><a href="./us_messages.html" class="options__list-items-link"><i class="fas fa-comments message-icon"></i> Messages</a></li>
-                <li class="options__list-items"><a href="./us_activity.html" class="options__list-items-link"><i class="fas fa-history"></i> Your Activity</a></li>
-                <li class="options__list-items"><a href="./us_pend-app.html" class="options__list-items-link"><i class="fas fa-ellipsis-h"></i> Pending Appointments</a></li>
-                <li class="options__list-items"><a href="../homepage/stores.html" class="options__list-items-link"><i class="fas fa-store-alt"></i> Discover Stores</a></li>
-                <li class="options__list-items"><a href="../vendor/vd_index.html" class="options__list-items-link"><i class="fas fa-dollar-sign"></i> Become A Vendor</a></li>
+                <li class="options__list-items"><a href="./vd_pend-app.html" class="options__list-items-link"><i class="fas fa-ellipsis-h"></i> Pending Appointments</a></li>
+                <li class="options__list-items"><a href="./vd_messages.html" class="options__list-items-link"><i class="fas fa-comments message-icon"></i> Messages</a></li>
+                <li class="options__list-items"><a href="./vd_activity.html" class="options__list-items-link"><i class="fas fa-history"></i> Appointment History</a></li>
+                <li class="options__list-items"><a href="./vd_index.html" class="options__list-items-link"><i class="fas fa-dollar-sign"></i> Open Another Store</a></li>
+                <!-- <li class="options__list-items"><a href="#" class="options__list-items-link"></a></li>
+                <li class="options__list-items"><a href="#" class="options__list-items-link"></a></li> -->
             </ul>
         </div>
     </div>
+
 
     <div class="history__body">
         <div class="history__template">
@@ -69,18 +79,21 @@
                 <table>
                     <caption>History</caption>
                     <tr>
-                        <th>Vendor</th>
+                        <th>Client</th>
+                        <th>Phone</th>
                         <th>Service</th>
                         <th>Date and Time</th>
-                        <th>Chat</th>
+                        <th>Note</th>
                     </tr>
-
+    
                     <tr>
-                        <td>Hair by Gerald</td>
+                        <td>Jane Doe</td>
+                        <td>0987654321</td>
                         <td>Salon</td>
-                        <td>14/03/2021 <br>
+                        <td>15/03/2021 <br>
                         18:22</td>
-                        <td>Weave Install
+                        <td>
+                            Weave install
                             <br>
                             <a href="#"><button class="btn btn-reply" id="myBtn">Message</button></a>
                         <!-- MODAL -->
@@ -96,23 +109,26 @@
                                 <br> <br>
                                 <a href="#"><button class="btn btn-reply">Send</button></a>      
                                 </div>        
-                             </div></td>
+                             </div>
+                        </td>
                     </tr>
-
+    
                     <tr>
-                        <td>Nailed It</td>
-                        <td>Nails</td>
-                        <td>14/03/2021 <br>
+                        <td>James Brown</td>
+                        <td>0987654321</td>
+                        <td>Spa</td>
+                        <td>16/03/2021 <br>
                         02:22</td>
-                        <td>Acrylics</td>
+                        <td>I'd like to know the price upfront for a brazillian wax</td>
                     </tr>
-
+    
                     <tr>
-                        <td>Diana Signature Makeover</td>
-                        <td>Makeup</td>
-                        <td>13/03/2021 <br>
+                        <td>Tunde Ednut</td>
+                        <td>0987654321</td>
+                        <td>Salon</td>
+                        <td>16/03/2021 <br>
                         17:37</td>
-                        <td>Owambe Makeup</td>
+                        <td>I want a weave tint. Is burgundy available?</td>
                     </tr>
                 </table>
             </div>
@@ -120,9 +136,7 @@
     </div>
 
 
-
-
-    
+      
     <script src="https://kit.fontawesome.com/ceaf37b45e.js" crossorigin="anonymous"></script>
     <script src="../../index.js"></script>
 </body>

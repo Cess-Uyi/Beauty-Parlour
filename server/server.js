@@ -1,6 +1,5 @@
 const http = require('http');
 const app = require('./app');
-// const expressValidator = require('express-validator');
 
 const PORT = process.env.PORT || 5000;
 

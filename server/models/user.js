@@ -1,23 +1,87 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema(
-    {
-        _id: mongoose.Schema.Types.ObjectId,
-        email: { 
-            type: String,
-            required: true,
-            unique: true,
-            match: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
-        },
-        password: {type: String, required: true}
-        // ,
-        // userStatus: {type: String, required: true, default: "active"}
+  {
+    fullName: {
+      type: String,
     },
-    { timestamps: true }
+
+    username: {
+      required: true,
+      type: String,
+    },
+
+    email: {
+      required: true,
+      type: String,
+    },
+
+    phoneNo: {
+      required: true,
+      type: String,
+    },
+
+    password: {
+      required: true,
+      type: String,
+    },
+
+    userType: {
+      required: true,
+      type: String,
+    },
+
+    userRole: {
+      required: true,
+      type: Number,
+      Enumerator: [1, 2, 3],
+    },
+
+    userStatus: {
+      required: true,
+      type: String,
+      default: "active",
+    },
+
+    lockoutEnd: {
+      required: false,
+      type: Date,
+      default: null,
+    },
+
+    vendor: {
+      businessName: {
+        type: String,
+      },
+      businessCategory: [],
+      address: [
+        {
+          streetName: {
+            type: String,
+          },
+          city: {
+            type: String,
+          },
+          state: {
+            type: String,
+          },
+        },
+      ],
+      photos: [
+        {
+          filePath: {
+            type: String,
+            required: false,
+          },
+          mimeType: {
+            type: String,
+            required: false,
+          },
+        },
+      ],
+    },
+  },
+  { timestamps: true }
 );
 
-// export const active = "active"
-// export const suspended = "suspended"
-// export const deactivated = "deactivated"
-
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model("User", userSchema);
