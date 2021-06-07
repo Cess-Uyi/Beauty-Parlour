@@ -82,37 +82,35 @@
         <div class="inner-profile__body">
             <form action="">
                 <div>
-                <label for="name">Name</label> <br>
-                <input type="text" id="name" name="name" placeholder="full name" required="required">
-                </div>
-
-                <div>
-                <label for="phone">Phone</label> <br>
-                <input type="number" id="phone" name="phone" placeholder="phone number" required="required">
-                </div>
-
-                <div>
                     <label for="store">Store</label> <br>
-                    <input type="text" id="store" name="store" placeholder="name of store" required="required">
+                    <!-- <input type="text" id="store" name="store" placeholder="name of store" required="required"> -->
+                    <select name="store" id="store" class="form_dropdown">
+                        <option value="Hair by Gerald">Hair by Gerald</option>
+                        <option value="Spa Zone">Spa Zone</option>
+                        <option value="Diana Signature Makeover">Diana Signature Makeover</option>
+                        <option value="Bibyonce">Bibyonce</option>
+                        <option value="Nailed It!">Nailed It!</option>
+                    </select>
                 </div>
 
                 <div>
                     <label for="service">Service</label> <br>
-                    <input type="text" id="service" name="service" placeholder="service required" required="required">
+                    <!-- <input type="text" id="service" name="service" placeholder="service required" required="required"> -->
+                    <select name="services" id="services" class="form_dropdown">
+                        <option value="salon">Salon</option>
+                        <option value="spa">Spa</option>
+                        <option value="nails">Nails</option>
+                        <option value="makeup">Makeup</option>
+                    </select>
                 </div>
 
                 <div>
-                    <label for="time">Time</label> <br>
-                    <input type="time" id="time" name="time" required="required">
+                    <label for="date-time">Date and Time</label> <br>
+                    <input type="datetime-local" id="datetime" name="datetime" required="required">
                 </div>
 
                 <div>
-                    <label for="date">Date</label> <br>
-                    <input type="date" id="date" name="date" required="required">
-                </div>
-
-                <div>
-                    <label for="information">And Additional information?</label> <br>
+                    <label for="information">Additional information?</label> <br>
                     <input type="text" id="information" name="information">
                 </div>
             </form>

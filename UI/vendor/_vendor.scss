@@ -63,16 +63,26 @@
     }
 }
 
-.accept-btn {
+.accept-btn{
     background-image: none;
     background-color: green;
     color: $color-grey;
+
+    &-pendapp{
+        height: 2rem;
+        width: 5rem;
+    }
 }
 
 .decline-btn{
     background-image: none;
     background-color: red;
     color: $color-grey;
+
+    &-pendapp{
+        height: 2rem;
+        width: 5rem;
+    }
 }
 
 .vendor__button{
