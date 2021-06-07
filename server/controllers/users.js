@@ -5,7 +5,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { validationResult } = require("express-validator");
 const EmailService = require("../services/email-service");
-const { v4: uuidv4 } = require('uuid');
 
 exports.users_create_user = (req, res, next) => {
   const errors = validationResult(req);
@@ -191,7 +190,7 @@ exports.users_book_appointment = (req, res, next) => {
       });
       appointment.save().then((appointmentId) => {
         Appointment.findById(appointmentId)
-          .populate("vendorId userId", "vendor.businessName email fullName")
+          .populate("vendorId userId serviceId", "vendor.businessName email fullName name")
           .then((response) => {
             res.status(201).json({
               appointmentDetail: response,
@@ -200,9 +199,7 @@ exports.users_book_appointment = (req, res, next) => {
             EmailService.sendMail(
               "New Appointment",
               `<b>Hi ${response.userId.fullName}, \n Your appointment with ${response.vendorId.vendor.businessName} by ${response.dateTime} has been successfully scheduled.</b>`,
-              [req.userData.email],
-              null,
-              "Beauty Parlour"
+              [req.userData.email]
             );
 
             EmailService.sendMail(
@@ -212,9 +209,7 @@ exports.users_book_appointment = (req, res, next) => {
               }, \n You have a new appointment with ${
                 (response, userId.fullName)
               } by ${response.dateTime}. Check your profile for more details.`,
-              [response.vendorId.email],
-              null,
-              "Beauty Parlour"
+              [response.vendorId.email]
             );
           });
       });
@@ -354,46 +349,46 @@ exports.users_changePassword = (req, res, next) => {
     .then((user) => {
       if (!user) {
         res.status(401).json({
-          message: "Invalid user",
-        });
+          message: "Invalid user"
+        })
         return;
       }
       bcrypt.compare(oldPassword, user.password, (err, result) => {
         if (err) {
           return res.status(401).json({
             message: "Something went wrong. Please contact support",
-          });
+          })
         }
-        console.log("result ==> ", result);
+        console.log("result ==> ", result)
         if (result) {
           bcrypt.hash(newPassword, 10, (err, hash) => {
             if (err) {
               return res.status(500).json({
-                error: err,
-              });
+                error: err
+              })
             }
-            console.log("saving user");
-            user.password = hash;
-            user.save().then((result) => {
+            user.password = hash
+            user.save()
+            .then((result) => {
               res.status(200).json({
-                message: "Password successfully updated",
-              });
-            });
-          });
-          return;
+                message: "Password successfully updated"
+              })
+            })
+          })
+          return
         }
         return res.status(401).json({
-          message: "Auth failed",
-        });
-      });
+          message: "Auth failed"
+        })
+      })
     })
     .catch((err) => {
       console.log(err);
       res.status(500).json({
         error: err,
-      });
-    });
-};
+      })
+    })
+}
 
 
 exports.users_forgotPassword = (req, res, next) => {
@@ -401,42 +396,78 @@ exports.users_forgotPassword = (req, res, next) => {
     .then((user) => {
       if (!user) {
         return res.status(404).json({
-          message: "user not found",
-        });
+          message: "user not found"
+        })
       }
-      // const newPassword = uuidv4().replace(/-/g,"").toUpperCase();
-      const newPassword = Math.floor(100000 + Math.random() * 900000).toString();
-      bcrypt.hash(newPassword, 10, (err, hash) => {
-        if (err) {
-          return res.status(500).json({
-            error: err,
-          });
-        }
-        console.log("saving user");
-        user.password = hash;
 
-        user.save().then((result) => {
-          res.status(200).json({
-            message:
-              "New password sent to your email. You can now login with your new password",
-          });
-        });
-        EmailService.sendMail(
-          "New Password",
-          `<b>Your new passsword is ${newPassword}. Ensure to change your password after logging in</b>`,
-          [user.email],
-          null,
-          "Beauty Parlour"
-        );
-      });
+      const passwordResetToken = jwt.sign({ email: req.body.email}, process.env.JWT_KEY, { expiresIn: '15m'})
+      const baseUrl = process.env.BASE_URL
+      const passwordReset = `${baseUrl}/user/reset-password?token=${passwordResetToken}`
+
+      EmailService.sendMail(
+        "Password Reset Request",
+        `<a href="${passwordReset}">CLICK HERE TO RESET</a>
+
+        <p>Having problem with the button above? Click the link below to reset your password</p>
+
+        <p>${passwordReset}</p>
+        `,
+        [user.email]
+      )
+      return res.status(200).json({
+        message: "Reset link sent to your email"
+      })
     })
     .catch((err) => {
       console.log(err);
       res.status(500).json({
         error: err,
-      });
-    });
-};
+      })
+    })
+}
+
+
+exports.users_reset_password = (req, res, next) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  const passwordToken = req.query.token
+  const tokenValidity = jwt.verify(passwordToken, process.env.JWT_KEY, (err, success)=>{
+    if(err) {
+      console.log(err)
+      return false
+    }
+    return success
+  })
+  if(!tokenValidity) {
+    return res.status(403).json({
+      statusCode: 403,
+      message: 'Expired or invalid token'
+    })
+  }
+  const userEmail = tokenValidity.email
+  const newPassword = req.body.newPassword
+  
+
+  User.findOne({ email: userEmail})
+  .then((user) => {
+    bcrypt.hash(newPassword, 10, (err, hash) => {
+      if (err) {
+        return res.status(500).json({
+          error: err
+        })
+      }
+      user.password = hash
+      user.save()
+      .then((result) => {
+        res.status(200).json({
+          message: "Password successfully updated"
+        })
+      })
+    })
+  })
+}
 
 
 exports.users_delete_user = (req, res, next) => {
@@ -444,17 +475,17 @@ exports.users_delete_user = (req, res, next) => {
     .then((doc) => {
       if (!doc) {
         return res.status(404).json({
-          message: "user not found",
-        });
+          message: "user not found"
+        })
       }
       doc.delete().then(() => {
         res.status(200).json({
-          message: "User deleted",
-        });
-      });
+          message: "User deleted"
+        })
+      })
     })
     .catch((err) => {
-      console.log(err);
-      res.status(500).json({ error: err });
-    });
+      console.log(err)
+      res.status(500).json({ error: err })
+    })
 }

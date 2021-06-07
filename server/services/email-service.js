@@ -3,12 +3,10 @@ const nodemailer = require("nodemailer");
 module.exports.sendMail = function (
   subject,
   body,
-  toEmails = [],
-  fromEmail,
-  fromName
+  toEmails = []
 ) {
-  fromEmail = fromEmail ? fromEmail : process.env.EMAIL_USERNAME;
-  fromName = fromName ? fromName : process.env.EMAIL_FROM_NAME;
+  fromEmail = process.env.EMAIL_USERNAME;
+  fromName = process.env.EMAIL_FROM_NAME;
   if (!subject || !body || !toEmails || toEmails.length <= 0) {
     return false;
   }

@@ -52,6 +52,12 @@ router.put("/changepassword/:userId", checkAuth, UsersController.users_changePas
 
 router.put("/forgotpassword", UsersController.users_forgotPassword)
 
+router.put('/reset-password', 
+[
+  body('confirmPassword', 'Passwords do not match').custom((value, {req}) => (value === req.body.newPassword)),
+], 
+UsersController.users_reset_password)
+
 router.get("/:userId", checkAuth, UsersController.users_get_user);
 
 router.delete("/:userId", checkAuth, UsersController.users_delete_user);
