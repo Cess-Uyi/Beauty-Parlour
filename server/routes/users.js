@@ -30,7 +30,9 @@ router.post("/signup",
   UsersController.users_create_user
 );
 
-router.get("/", checkAuth, UsersController.users_get_allUsers);
+router.get("/", 
+// checkAuth,
+ UsersController.users_get_allUsers);
 
 router.get("/customers", checkAuth, UsersController.users_get_customers);
 
