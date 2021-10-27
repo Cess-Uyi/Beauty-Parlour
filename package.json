@@ -1,5 +1,8 @@
 {
   "name": "beauty-parlour",
+  "engines": {
+    "node": "12.1.*"
+  },
   "version": "1.0.0",
   "description": "This is a beauty parlour that links clients with different vendors offering beauty services.\r There are three different categories of people who use this website;\r >Admin",
   "main": "index.js",
