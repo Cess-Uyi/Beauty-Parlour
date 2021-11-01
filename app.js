@@ -36,6 +36,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", function (req, res) {
+  res.send("hello world");
+});
+
 app.use("/v1/user", userRoutes);
 app.use("/v1/vendor", vendorRoutes);
 app.use("/v1/admin", adminRoutes);
