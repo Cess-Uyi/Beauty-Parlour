@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { validationResult } = require("express-validator");
 const mongoose = require("mongoose");
-const EmailService = require("../services/email-service")
+const EmailService = require("../services/email-service");
 
 exports.vendors_create_vendor = (req, res, next) => {
   const errors = validationResult(req);
@@ -44,7 +44,13 @@ exports.vendors_create_vendor = (req, res, next) => {
               message: "account created",
             });
           });
-          EmailService.sendMail("Welcome to Beauty Parlour", "<b>Your account has been successfully registered with Beauty Parlour</b>", [req.body.email], null, "Beauty Parlour");
+          EmailService.sendMail(
+            "Welcome to Beauty Parlour",
+            "<b>Your account has been successfully registered with Beauty Parlour</b>",
+            [req.body.email],
+            null,
+            "Beauty Parlour"
+          );
         })
         .catch((err) => {
           console.log(err);
