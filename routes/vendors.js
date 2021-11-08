@@ -8,7 +8,7 @@ const VendorsController = require("../controllers/vendors");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "./server/uploads");
+    cb(null, "./uploads");
   },
   filename: (req, file, cb) => {
     cb(

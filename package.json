@@ -10,8 +10,8 @@
     "compile:sass": "node-sass UI/sass/main.scss UI/css/main.css -w",
     "live": "live-server",
     "start": "npm-run-all --parallel compile:sass live",
-    "api": "node server/server.js",
-    "dev": "nodemon server/server.js"
+    "api": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "Uyi",
   "license": "ISC",
